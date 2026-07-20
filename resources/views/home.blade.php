@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- HERO SECTION --}}
-@php $heroImage = $settings->hero_home_image ?? '/images/widomenvoys-hero.webp'; @endphp
+@php $heroImage = !empty($settings->hero_home_image) ? $settings->hero_home_image : '/images/widomenvoys-hero.webp'; @endphp
 <section class="relative min-h-[380px] sm:min-h-[460px] md:min-h-[560px] lg:min-h-[620px] flex items-end sm:items-center overflow-hidden hero-bg" style="background-image: url('{{ $heroImage }}')">
     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/20"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>

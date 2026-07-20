@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- HERO --}}
-@php $heroBg = $settings->hero_download_image ?? '/images/download-hero-bg.webp'; @endphp
+@php $heroBg = !empty($settings->hero_download_image) ? $settings->hero_download_image : '/images/download-hero-bg.jpg'; @endphp
 <header class="relative min-h-[400px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[520px] flex items-end sm:items-center overflow-hidden hero-bg" style="background-image: url('{{ $heroBg }}')">
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
     <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 w-full py-10 sm:py-14 md:py-20 lg:py-24">
@@ -16,13 +16,13 @@
             </div>
             <h1 class="font-headline text-[30px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-extrabold mb-3 sm:mb-4 tracking-tight text-white leading-[1.08]">{{ $hero['title'] }}</h1>
             <p class="text-[14px] sm:text-sm md:text-base lg:text-lg max-w-xl text-white/75 leading-relaxed mb-5 sm:mb-6 md:mb-8">{{ $hero['description'] }}</p>
-            <div class="flex flex-wrap gap-2.5 sm:gap-3">
-                <a href="#panel-messages" onclick="switchTab('messages')" class="group inline-flex items-center gap-2 bg-primary text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
-                    <span class="material-symbols-outlined text-[16px] sm:text-[18px]">mic</span>
+            <div class="flex flex-nowrap gap-2.5 sm:gap-3">
+                <a href="#panel-messages" onclick="switchTab('messages')" class="group inline-flex items-center gap-1.5 sm:gap-2 bg-primary text-white font-headline text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] md:text-[18px]">mic</span>
                     Get Messages
                 </a>
-                <a href="#panel-podcasts" onclick="switchTab('podcasts')" class="group inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-white/25 hover:bg-white/25 transition-all duration-300">
-                    <span class="material-symbols-outlined text-[16px] sm:text-[18px]">headphones</span>
+                <a href="#panel-podcasts" onclick="switchTab('podcasts')" class="group inline-flex items-center gap-1.5 sm:gap-2 bg-white/15 backdrop-blur-sm text-white font-headline text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border border-white/25 hover:bg-white/25 transition-all duration-300">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] md:text-[18px]">headphones</span>
                     Listen Now
                 </a>
             </div>
