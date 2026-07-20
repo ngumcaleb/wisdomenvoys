@@ -17,7 +17,7 @@ class TeamMemberController extends Controller
     public function store(Request $request): JsonResponse
     {
         $validated = $request->validate([
-            'stream_id' => 'required|exists:streams,id',
+            'stream_id' => 'nullable|exists:streams,id',
             'name' => 'required|string|max:255',
             'role' => 'nullable|string|max:255',
             'bio' => 'nullable|string',
@@ -26,6 +26,8 @@ class TeamMemberController extends Controller
             'phone' => 'nullable|string|max:255',
             'featured' => 'sometimes|boolean',
             'status' => 'sometimes|boolean',
+            'is_founder' => 'sometimes|boolean',
+            'is_stream_lead' => 'sometimes|boolean',
         ]);
 
         $member = TeamMember::create($validated);
@@ -44,7 +46,7 @@ class TeamMemberController extends Controller
     public function update(Request $request, TeamMember $teamMember): JsonResponse
     {
         $validated = $request->validate([
-            'stream_id' => 'sometimes|required|exists:streams,id',
+            'stream_id' => 'nullable|exists:streams,id',
             'name' => 'sometimes|required|string|max:255',
             'role' => 'nullable|string|max:255',
             'bio' => 'nullable|string',
@@ -53,6 +55,8 @@ class TeamMemberController extends Controller
             'phone' => 'nullable|string|max:255',
             'featured' => 'sometimes|boolean',
             'status' => 'sometimes|boolean',
+            'is_founder' => 'sometimes|boolean',
+            'is_stream_lead' => 'sometimes|boolean',
         ]);
 
         $teamMember->update($validated);

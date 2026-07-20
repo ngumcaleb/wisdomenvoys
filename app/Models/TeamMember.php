@@ -16,11 +16,15 @@ class TeamMember extends Model
         'phone',
         'featured',
         'status',
+        'is_founder',
+        'is_stream_lead',
     ];
 
     protected $casts = [
         'featured' => 'boolean',
         'status' => 'boolean',
+        'is_founder' => 'boolean',
+        'is_stream_lead' => 'boolean',
     ];
 
     public function stream()
