@@ -58,9 +58,9 @@
                 @foreach($service->meta['locations'] as $loc)
                     <div class="group border border-surface-container-high rounded-xl overflow-hidden hover:border-primary transition-colors">
                         <div class="h-48 overflow-hidden bg-surface-container relative">
-                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/0 transition-colors"></div>
+                            <div class="absolute inset-0 bg-surface-container-high group-hover:bg-transparent transition-colors"></div>
                             <div class="w-full h-full flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary/20 text-[80px]">{{ ($loc['type'] ?? 'physical') === 'online' ? 'language' : 'location_on' }}</span>
+                                <span class="material-symbols-outlined text-on-surface-variant/50 text-[80px]">{{ ($loc['type'] ?? 'physical') === 'online' ? 'language' : 'location_on' }}</span>
                             </div>
                         </div>
                         <div class="p-8">
@@ -94,7 +94,7 @@
                 </p>
                 <div class="space-y-6">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary">
                             <span class="material-symbols-outlined">volunteer_activism</span>
                         </div>
                         <div>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                        <div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary">
                             <span class="material-symbols-outlined">record_voice_over</span>
                         </div>
                         <div>
@@ -153,7 +153,7 @@
         <div class="absolute inset-0 bg-gradient-to-r from-on-secondary-fixed via-on-secondary-fixed/80 to-transparent z-10"></div>
         <div class="relative z-20 max-w-[1280px] mx-auto px-6 w-full">
             <div class="max-w-3xl">
-                <span class="inline-block py-1 px-4 bg-primary/20 text-primary-fixed-dim border border-primary/30 font-headline text-xs font-bold uppercase tracking-[0.1em] rounded-full mb-6">{{ $service->meta['eyebrow'] ?? 'THE LIFE COMMUNITY' }}</span>
+                <span class="inline-block py-1 px-4 bg-surface-container-high text-primary-fixed-dim border border-primary/30 font-headline text-xs font-bold uppercase tracking-[0.1em] rounded-full mb-6">{{ $service->meta['eyebrow'] ?? 'THE LIFE COMMUNITY' }}</span>
                 <h1 class="font-headline text-[48px] md:text-[56px] font-extrabold text-white mb-8 tracking-tight">{{ $service->title }}</h1>
                 <p class="text-lg text-white/80 max-w-2xl leading-relaxed">
                     {{ $service->meta['hero_description'] ?? $service->description }}
@@ -194,24 +194,24 @@
                 <div class="space-y-4">
                     <div class="rounded-2xl overflow-hidden h-64 bg-surface-container shadow-sm">
                         <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-surface-container">
-                            <span class="material-symbols-outlined text-primary/20 text-[60px]">groups</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px]">groups</span>
                         </div>
                     </div>
                     <div class="rounded-2xl overflow-hidden h-80 bg-surface-container shadow-sm">
                         <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-surface-container">
-                            <span class="material-symbols-outlined text-primary/20 text-[60px]">church</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px]">church</span>
                         </div>
                     </div>
                 </div>
                 <div class="space-y-4 pt-8">
                     <div class="rounded-2xl overflow-hidden h-80 bg-surface-container shadow-sm">
                         <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-surface-container">
-                            <span class="material-symbols-outlined text-primary/20 text-[60px]">handshake</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px]">handshake</span>
                         </div>
                     </div>
                     <div class="rounded-2xl overflow-hidden h-64 bg-surface-container shadow-sm">
                         <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-surface-container">
-                            <span class="material-symbols-outlined text-primary/20 text-[60px]">diversity_3</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px]">diversity_3</span>
                         </div>
                     </div>
                 </div>
@@ -360,7 +360,7 @@
                 <div class="{{ $loop->iteration === 2 ? '' : 'order-1 md:order-2' }}">
                     <div class="rounded-xl overflow-hidden shadow-2xl transform {{ $loop->iteration === 2 ? '-rotate-1' : 'rotate-1' }}">
                         <div class="w-full h-80 bg-gradient-to-br from-primary/10 to-surface-container flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/20 text-[100px]">{{ ['local_fire_department', 'school', 'volunteer_activism'][$loop->index] ?? 'church' }}</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[100px]">{{ ['local_fire_department', 'school', 'volunteer_activism'][$loop->index] ?? 'church' }}</span>
                         </div>
                     </div>
                 </div>

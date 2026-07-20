@@ -20,13 +20,13 @@
                     <img alt="{{ $message->title }}" class="w-full aspect-square object-cover" src="{{ $message->thumbnail }}">
                 @else
                     <div class="w-full aspect-square bg-surface-container flex items-center justify-center">
-                        <span class="material-symbols-outlined text-primary/20 text-[80px]">music_note</span>
+                        <span class="material-symbols-outlined text-on-surface-variant/50 text-[80px]">music_note</span>
                     </div>
                 @endif
             </div>
             <div class="flex-1">
                 @if($message->category)
-                    <span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded text-[12px] font-bold tracking-widest uppercase mb-4">{{ $message->category->name }}</span>
+                    <span class="inline-block bg-surface-container-high text-primary px-3 py-1 rounded text-[12px] font-bold tracking-widest uppercase mb-4">{{ $message->category->name }}</span>
                 @endif
                 <h1 class="font-headline text-[32px] md:text-[40px] font-extrabold text-white mb-4 leading-tight">{{ $message->title }}</h1>
                 <div class="flex flex-wrap items-center gap-4 text-primary-fixed/80 text-sm mb-6">

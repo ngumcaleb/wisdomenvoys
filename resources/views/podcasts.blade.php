@@ -36,7 +36,7 @@
         </div>
     @empty
         <div class="text-center py-20">
-            <span class="material-symbols-outlined text-primary/30 text-[80px]">podcasts</span>
+            <span class="material-symbols-outlined text-on-surface-variant/70 text-[80px]">podcasts</span>
             <p class="text-on-surface-variant mt-4">No podcasts available yet.</p>
         </div>
     @endforelse

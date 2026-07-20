@@ -30,7 +30,7 @@
                     <img alt="{{ $team_leader->name }}" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" src="{{ $team_leader->photo }}">
                 @else
                     <div class="w-full aspect-square flex items-center justify-center bg-surface-container-high">
-                        <span class="material-symbols-outlined text-primary/20 text-[120px]">person</span>
+                        <span class="material-symbols-outlined text-on-surface-variant/50 text-[120px]">person</span>
                     </div>
                 @endif
             </div>

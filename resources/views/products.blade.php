@@ -29,7 +29,7 @@
 <section id="products" class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16 lg:mb-20">
         <div class="max-w-xl">
-            <div class="inline-flex items-center gap-2 bg-primary/8 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+            <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
                 <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
                 <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">KINGDOM RESOURCES</span>
             </div>
@@ -50,7 +50,7 @@
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $product->image }}" alt="{{ $product->title }}">
                     @else
                         <div class="w-full h-full bg-gradient-to-br from-primary/5 via-surface-container to-primary/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/15 text-[50px] sm:text-[60px]">{{ match($product->type) { 'book' => 'menu_book', 'manual' => 'description', 'training' => 'school', 'digital' => 'devices', default => 'inventory_2' } }}</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/40 text-[50px] sm:text-[60px]">{{ match($product->type) { 'book' => 'menu_book', 'manual' => 'description', 'training' => 'school', 'digital' => 'devices', default => 'inventory_2' } }}</span>
                         </div>
                     @endif
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
@@ -71,7 +71,7 @@
             </div>
         @empty
             <div class="col-span-full text-center py-16 sm:py-20">
-                <span class="material-symbols-outlined text-primary/20 text-[60px] sm:text-[80px]">inventory_2</span>
+                <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px] sm:text-[80px]">inventory_2</span>
                 <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant mt-3 sm:mt-4">No products available yet.</p>
             </div>
         @endforelse

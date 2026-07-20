@@ -29,7 +29,7 @@
 <section id="services" class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16 lg:mb-20">
         <div class="max-w-xl">
-            <div class="inline-flex items-center gap-2 bg-primary/8 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+            <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
                 <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
                 <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">OUR SERVICES</span>
             </div>
@@ -50,12 +50,12 @@
                                 <img alt="{{ $service->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $service->image }}">
                             @else
                                 <div class="w-full h-full min-h-[200px] md:min-h-full bg-gradient-to-br from-primary/8 to-surface-container flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">church</span>
+                                    <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">church</span>
                                 </div>
                             @endif
                         </div>
                         <div class="md:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-                            <span class="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+                            <span class="w-10 h-10 sm:w-12 sm:h-12 bg-surface-container-high rounded-xl flex items-center justify-center mb-4 sm:mb-5">
                                 <span class="material-symbols-outlined text-primary text-[20px] sm:text-[22px]">church</span>
                             </span>
                             <h3 class="font-headline text-[20px] sm:text-[24px] md:text-[28px] font-bold text-on-surface mb-3 sm:mb-4 leading-snug">{{ $service->title }}</h3>
@@ -98,7 +98,7 @@
                                 <img alt="{{ $service->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ $service->image }}">
                             @else
                                 <div class="w-full h-full bg-gradient-to-br from-primary/8 to-surface-container flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-primary/20 text-2xl sm:text-3xl md:text-4xl">church</span>
+                                    <span class="material-symbols-outlined text-on-surface-variant/50 text-2xl sm:text-3xl md:text-4xl">church</span>
                                 </div>
                             @endif
                         </div>
@@ -117,7 +117,7 @@
             @endif
         @empty
             <div class="text-center py-16 sm:py-20">
-                <span class="material-symbols-outlined text-primary/20 text-[60px] sm:text-[80px]">church</span>
+                <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px] sm:text-[80px]">church</span>
                 <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant mt-3 sm:mt-4">No services available yet.</p>
             </div>
         @endforelse
@@ -136,13 +136,13 @@
                         <img alt="{{ $team_leader->name }}" class="w-full h-auto rounded-[16px] sm:rounded-[20px]" src="{{ $team_leader->photo }}">
                     @else
                         <div class="w-full aspect-square flex items-center justify-center bg-surface-container rounded-[16px] sm:rounded-[20px]">
-                            <span class="material-symbols-outlined text-primary/20 text-[80px] sm:text-[100px] md:text-[120px]">person</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[80px] sm:text-[100px] md:text-[120px]">person</span>
                         </div>
                     @endif
                 </div>
             </div>
             <div class="lg:w-1/2">
-                <div class="inline-flex items-center gap-2 bg-primary/8 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+                <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
                     <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
                     <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">TEAM LEADER</span>
                 </div>

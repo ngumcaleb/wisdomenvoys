@@ -6,8 +6,8 @@
 @php $heroImage = !empty($settings->hero_home_image) ? $settings->hero_home_image : '/images/widomenvoys-hero.webp'; @endphp
 <section class="relative min-h-[400px] sm:min-h-[460px] md:min-h-[560px] lg:min-h-[620px] flex items-end sm:items-center overflow-hidden hero-bg" style="background-image: url('{{ $heroImage }}')">
     <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30"></div>
-    <div class="absolute top-6 right-6 sm:top-10 sm:right-10 md:top-14 md:right-14 lg:top-20 lg:right-20 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 border border-white/[0.06] rounded-full pointer-events-none"></div>
-    <div class="absolute bottom-10 right-12 sm:bottom-14 sm:right-16 md:bottom-20 md:right-20 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 border border-white/[0.04] rounded-full pointer-events-none"></div>
+    <div class="absolute top-0 right-0 sm:top-4 sm:right-4 md:top-6 md:right-6 lg:top-10 lg:right-10 w-[140px] sm:w-[200px] md:w-[280px] lg:w-[360px] h-[140px] sm:h-[200px] md:h-[280px] lg:h-[360px] border-[3px] border-white/10 rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-6 right-4 sm:bottom-10 sm:right-8 md:bottom-14 md:right-12 lg:bottom-20 lg:right-16 w-[100px] sm:w-[140px] md:w-[200px] lg:w-[260px] h-[100px] sm:h-[140px] md:h-[200px] lg:h-[260px] border-[2px] border-white/[0.08] rounded-full pointer-events-none"></div>
     <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 text-white w-full py-10 sm:py-14 md:py-20 lg:py-24">
         <div class="max-w-3xl lg:max-w-4xl space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
             <span class="inline-block bg-primary text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.14em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg shadow-primary/30">{{ $hero['eyebrow'] ?? 'We Win, Influence, Establish' }}</span>
@@ -31,7 +31,7 @@
 <section class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16 lg:mb-20">
         <div class="max-w-xl">
-            <div class="inline-flex items-center gap-2 bg-primary/8 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+            <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
                 <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
                 <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">OUR SERVICES</span>
             </div>
@@ -51,7 +51,7 @@
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $service->image }}" alt="{{ $service->title }}">
                     @else
                         <div class="w-full h-full bg-surface-container flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/25 text-4xl sm:text-5xl">church</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/60 text-4xl sm:text-5xl">church</span>
                         </div>
                     @endif
                     <div class="absolute inset-0 bg-gradient-to-t from-primary/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -73,7 +73,7 @@
             @foreach(range(1, 4) as $i)
                 <div class="bg-surface rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.06)] flex flex-col h-full border border-outline-variant/50">
                     <div class="h-40 sm:h-48 md:h-52 lg:h-56 bg-surface-container flex items-center justify-center">
-                        <span class="material-symbols-outlined text-primary/20 text-4xl sm:text-5xl">image</span>
+                        <span class="material-symbols-outlined text-on-surface-variant/50 text-4xl sm:text-5xl">image</span>
                     </div>
                     <div class="p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col flex-grow">
                         <div class="h-4 sm:h-5 bg-surface-container-high rounded-md w-3/4 mb-3 sm:mb-4"></div>
@@ -112,7 +112,7 @@
                         <img class="w-full h-full object-cover" src="{{ $team_leader->photo }}" alt="{{ $team_leader->name }}">
                     @else
                         <div class="w-full h-full flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/20 text-[80px] sm:text-[100px] md:text-[120px]">person</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-[80px] sm:text-[100px] md:text-[120px]">person</span>
                         </div>
                     @endif
                 </div>
@@ -130,7 +130,7 @@
 <section class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16">
         <div class="max-w-xl">
-            <div class="inline-flex items-center gap-2 bg-primary/8 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+            <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
                 <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
                 <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">OUR BRANCHES</span>
             </div>
@@ -152,7 +152,7 @@
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                     @else
                         <div class="w-full h-full flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/15 text-[80px] sm:text-[100px]">location_on</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/40 text-[80px] sm:text-[100px]">location_on</span>
                         </div>
                     @endif
                 </div>
@@ -177,7 +177,7 @@
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                         @else
                             <div class="w-full h-full flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">location_on</span>
                             </div>
                         @endif
                     </div>
@@ -203,7 +203,7 @@
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                         @else
                             <div class="w-full h-full flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">location_on</span>
                             </div>
                         @endif
                     </div>
@@ -229,7 +229,7 @@
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                         @else
                             <div class="w-full h-full flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">location_on</span>
                             </div>
                         @endif
                     </div>
@@ -253,7 +253,7 @@
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $last->cover_image }}" alt="{{ $last->name }}">
                         @else
                             <div class="w-full h-full flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">location_on</span>
                             </div>
                         @endif
                     </div>
@@ -280,7 +280,7 @@
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                         @else
                             <div class="w-full h-full flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">location_on</span>
                             </div>
                         @endif
                     </div>
@@ -304,7 +304,7 @@
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                             @else
                                 <div class="w-full h-full flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                    <span class="material-symbols-outlined text-on-surface-variant/40 text-[60px] sm:text-[80px]">location_on</span>
                                 </div>
                             @endif
                         </div>
@@ -327,8 +327,8 @@
 {{-- VISION & MANDATE --}}
 @if($visions->count())
 <section class="py-14 sm:py-18 md:py-24 lg:py-28 bg-on-secondary-fixed text-white overflow-hidden relative">
-    <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-surface-container rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-surface-container rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
     <div class="max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 relative z-10">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16">
             <div class="max-w-xl">

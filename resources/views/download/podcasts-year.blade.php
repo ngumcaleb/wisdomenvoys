@@ -34,7 +34,7 @@
 <section class="pt-8 sm:pt-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
     <div class="bg-white p-4 sm:p-5 md:p-6 rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.06)] border border-outline-variant/50 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center sm:justify-between mb-8 sm:mb-10">
         <div class="flex items-center gap-2.5">
-            <span class="w-8 h-8 sm:w-9 sm:h-9 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="w-8 h-8 sm:w-9 sm:h-9 bg-surface-container-high rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="material-symbols-outlined text-primary text-[16px] sm:text-[18px]">headphones</span>
             </span>
             <span class="font-headline text-[12px] sm:text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant">{{ $podcasts->count() }} Episodes</span>
@@ -61,7 +61,7 @@
                         <img alt="{{ $msg->title }}" class="w-full h-full object-cover" src="{{ $msg->thumbnail }}">
                     @else
                         <div class="w-full h-full bg-gradient-to-br from-primary/8 to-surface-container flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/20 text-2xl sm:text-3xl md:text-4xl">headphones</span>
+                            <span class="material-symbols-outlined text-on-surface-variant/50 text-2xl sm:text-3xl md:text-4xl">headphones</span>
                         </div>
                     @endif
                 </div>
@@ -150,7 +150,7 @@
             @endif
         @empty
             <div class="text-center py-16 sm:py-20">
-                <span class="material-symbols-outlined text-primary/20 text-[60px] sm:text-[80px]">headphones_off</span>
+                <span class="material-symbols-outlined text-on-surface-variant/50 text-[60px] sm:text-[80px]">headphones_off</span>
                 <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant mt-3 sm:mt-4">No podcasts available for {{ $year->year }}.</p>
             </div>
         @endforelse
@@ -168,7 +168,7 @@
         <div class="flex items-center gap-3 sm:gap-4">
             <div id="player-thumb" class="w-11 h-11 sm:w-13 sm:h-13 md:w-14 md:h-14 rounded-full overflow-hidden shrink-0 border-2 border-white/20 shadow-lg">
                 <div id="player-thumb-img" class="w-full h-full bg-gradient-to-br from-primary/30 to-surface-container flex items-center justify-center">
-                    <span class="material-symbols-outlined text-primary/40 text-xl">headphones</span>
+                    <span class="material-symbols-outlined text-on-surface-variant text-xl">headphones</span>
                 </div>
             </div>
             <div class="flex-1 min-w-0">
@@ -311,7 +311,7 @@
             if (track.thumbnail) {
                 thumbImg.innerHTML = '<img src="' + track.thumbnail + '" class="w-full h-full object-cover">';
             } else {
-                thumbImg.innerHTML = '<span class="material-symbols-outlined text-primary/40 text-xl">headphones</span>';
+                thumbImg.innerHTML = '<span class="material-symbols-outlined text-on-surface-variant text-xl">headphones</span>';
             }
         }
         highlightActiveCard();

@@ -59,7 +59,7 @@
                             <img alt="Resources {{ $year->year }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $year->cover_image }}">
                         @else
                             <div class="w-full h-full bg-gradient-to-br from-primary/5 via-surface-container to-primary/10 flex items-center justify-center">
-                                <span class="font-headline text-5xl sm:text-6xl font-extrabold text-primary/15">{{ $year->year }}</span>
+                                <span class="font-headline text-5xl sm:text-6xl font-extrabold text-on-surface-variant/40">{{ $year->year }}</span>
                             </div>
                         @endif
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
@@ -95,7 +95,7 @@
                 </div>
             @empty
                 <div class="col-span-full text-center py-16 sm:py-20">
-                    <span class="material-symbols-outlined text-primary/30 text-[60px] sm:text-[80px]">folder_open</span>
+                    <span class="material-symbols-outlined text-on-surface-variant/70 text-[60px] sm:text-[80px]">folder_open</span>
                     <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant mt-3 sm:mt-4">No resources available yet.</p>
                 </div>
             @endforelse
@@ -112,7 +112,7 @@
                             <img alt="Messages {{ $year->year }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $year->cover_image }}">
                         @else
                             <div class="w-full h-full bg-gradient-to-br from-primary/5 via-surface-container to-primary/10 flex items-center justify-center">
-                                <span class="font-headline text-5xl sm:text-6xl font-extrabold text-primary/15">{{ $year->year }}</span>
+                                <span class="font-headline text-5xl sm:text-6xl font-extrabold text-on-surface-variant/40">{{ $year->year }}</span>
                             </div>
                         @endif
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
@@ -136,7 +136,7 @@
                 </div>
             @empty
                 <div class="col-span-full text-center py-16 sm:py-20">
-                    <span class="material-symbols-outlined text-primary/30 text-[60px] sm:text-[80px]">mic</span>
+                    <span class="material-symbols-outlined text-on-surface-variant/70 text-[60px] sm:text-[80px]">mic</span>
                     <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant mt-3 sm:mt-4">No message years available yet.</p>
                 </div>
             @endforelse
@@ -177,7 +177,7 @@
                 </div>
             @empty
                 <div class="col-span-full text-center py-16 sm:py-20">
-                    <span class="material-symbols-outlined text-primary/30 text-[60px] sm:text-[80px]">headphones</span>
+                    <span class="material-symbols-outlined text-on-surface-variant/70 text-[60px] sm:text-[80px]">headphones</span>
                     <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant mt-3 sm:mt-4">No podcast years available yet.</p>
                 </div>
             @endforelse
