@@ -53,7 +53,7 @@ class MessageSeeder extends Seeder
                 'description' => $data['description'],
                 'audio' => 'https://pub-aa5be4a8c7f74e1b96ef629d14f27bb6.r2.dev/messages/' . Str::slug($data['title']) . '.mp3',
                 'featured' => $data['featured'],
-                'published_at' => now()->subDays(rand(1, 365)),
+                'published_at' => \Carbon\Carbon::create($data['year'])->addDays(rand(0, 364)),
                 'status' => true,
             ]);
         }

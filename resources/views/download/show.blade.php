@@ -42,7 +42,7 @@
                     @endif
                     <span class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-[18px]">calendar_today</span>
-                        {{ $message->published_at?->format('F j, Y') ?? 'N/A' }}
+                        {{ $message->published_at?->format('d F Y') ?? 'N/A' }}
                     </span>
                     @if($message->duration)
                         <span class="flex items-center gap-2">

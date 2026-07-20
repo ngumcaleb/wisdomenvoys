@@ -65,7 +65,11 @@
                 {{-- Info --}}
                 <div class="flex-1 min-w-0">
                     <h3 class="font-headline text-[13px] sm:text-sm md:text-[15px] font-bold text-on-surface leading-snug truncate">{{ $message->title }}</h3>
-                    <p class="text-[11px] sm:text-[12px] md:text-[13px] text-on-surface-variant mt-0.5 sm:mt-1">{{ $message->published_at?->format('M d, Y') ?? 'N/A' }}</p>
+                    <p class="text-[11px] sm:text-[12px] md:text-[13px] text-on-surface-variant mt-0.5 sm:mt-1">
+                        @if($message->published_at)
+                            {{ $message->published_at->format('d F Y') }}
+                        @endif
+                    </p>
                     @if($message->description)
                         <p class="hidden md:block text-[12px] sm:text-[13px] text-on-surface-variant/70 mt-1.5 leading-relaxed line-clamp-2">{{ $message->description }}</p>
                     @endif
@@ -120,7 +124,9 @@
                             @endif
                             <span class="flex items-center gap-1.5">
                                 <span class="material-symbols-outlined text-[14px] text-primary">calendar_today</span>
-                                {{ $message->published_at?->format('M d, Y') ?? 'N/A' }}
+                                @if($message->published_at)
+                                    {{ $message->published_at->format('d F Y') }}
+                                @endif
                             </span>
                             @if($message->category)
                                 <span class="inline-flex items-center gap-1.5 bg-surface-container-high text-primary px-2.5 py-1 rounded-full font-bold">

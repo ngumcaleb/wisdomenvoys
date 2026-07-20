@@ -10,6 +10,10 @@
     <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30"></div>
     <div class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[350px] sm:w-[450px] md:w-[550px] lg:w-[650px] h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] border-[3px] border-white/10 rounded-full pointer-events-none"></div>
     <div class="absolute top-1/2 right-6 sm:right-8 -translate-y-1/2 w-[240px] sm:w-[320px] md:w-[400px] lg:w-[480px] h-[240px] sm:h-[320px] md:h-[400px] lg:h-[480px] border-[2px] border-white/[0.08] rounded-full pointer-events-none"></div>
+    <div class="absolute top-[15%] left-[8%] w-[100px] sm:w-[140px] md:w-[180px] h-[100px] sm:h-[140px] md:h-[180px] border-[2px] border-white/[0.06] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-[10%] left-[15%] w-[70px] sm:w-[90px] md:w-[120px] h-[70px] sm:h-[90px] md:h-[120px] border-[2px] border-white/[0.05] rounded-full pointer-events-none"></div>
+    <div class="absolute top-[25%] right-[30%] w-[60px] sm:w-[80px] md:w-[100px] h-[60px] sm:h-[80px] md:h-[100px] border-[2px] border-white/[0.04] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-[20%] right-[40%] w-[50px] sm:w-[70px] md:w-[90px] h-[50px] sm:h-[70px] md:h-[90px] border-[2px] border-white/[0.03] rounded-full pointer-events-none"></div>
     <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 w-full py-10 sm:py-14 md:py-20 lg:py-24">
         <div class="max-w-3xl">
             <span class="inline-block bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.14em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg shadow-primary/30 mb-4 sm:mb-5 md:mb-6">{{ $hero['eyebrow'] }}</span>
@@ -37,9 +41,9 @@
 <section id="impact" class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16 lg:mb-20">
         <div class="max-w-xl">
-            <div class="inline-flex items-center gap-2 bg-surface-container-high rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
-                <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-on-surface-variant">OUR GLOBAL MISSION</span>
+            <div class="inline-flex items-center gap-2 bg-primary rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-white">OUR GLOBAL MISSION</span>
             </div>
             <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface">
                 The Covenant Impact
