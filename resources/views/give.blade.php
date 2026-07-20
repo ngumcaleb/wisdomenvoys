@@ -37,99 +37,46 @@
     </div>
 </section>
 
-{{-- WHY GIVE --}}
+{{-- GIVING INFO --}}
 <section class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
-    <div class="text-center mb-10 sm:mb-12 md:mb-16">
-        <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
-            <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
-            <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">WHY GIVE</span>
-        </div>
-        <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface">Your Giving Makes an Impact</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-        <div class="p-6 sm:p-7 md:p-8 bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] flex flex-col items-center text-center group hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-surface-container-high flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-primary transition-colors duration-500">
-                <span class="material-symbols-outlined text-on-surface-variant text-[24px] sm:text-[26px] group-hover:text-white transition-colors duration-500">public</span>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 lg:gap-20 items-center">
+        {{-- Left: Text --}}
+        <div>
+            <div class="inline-flex items-center gap-2 bg-surface-container rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">HOW TO GIVE</span>
             </div>
-            <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-on-surface mb-3 sm:mb-4">Global Missions</h3>
-            <p class="text-[13px] sm:text-sm text-on-surface-variant leading-relaxed">Fund evangelical missions and convergence centers across nations to spread the word of the Kingdom.</p>
-        </div>
-        <div class="p-6 sm:p-7 md:p-8 bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] flex flex-col items-center text-center group hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-surface-container-high flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-primary transition-colors duration-500">
-                <span class="material-symbols-outlined text-on-surface-variant text-[24px] sm:text-[26px] group-hover:text-white transition-colors duration-500">school</span>
-            </div>
-            <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-on-surface mb-3 sm:mb-4">Leadership Training</h3>
-            <p class="text-[13px] sm:text-sm text-on-surface-variant leading-relaxed">Support our MLTP programs to raise thoroughly trained believers as agents of transformation in every sector.</p>
-        </div>
-        <div class="p-6 sm:p-7 md:p-8 bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] flex flex-col items-center text-center group hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-surface-container-high flex items-center justify-center mb-5 sm:mb-6 group-hover:bg-primary transition-colors duration-500">
-                <span class="material-symbols-outlined text-on-surface-variant text-[24px] sm:text-[26px] group-hover:text-white transition-colors duration-500">menu_book</span>
-            </div>
-            <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-on-surface mb-3 sm:mb-4">Free Resources</h3>
-            <p class="text-[13px] sm:text-sm text-on-surface-variant leading-relaxed">Provide free messages, manuals, and workbooks to those seeking spiritual growth through our digital platforms.</p>
-        </div>
-    </div>
-</section>
-
-{{-- ONLINE GIVING --}}
-<section id="online-giving" class="py-14 sm:py-18 md:py-24 lg:py-28 bg-surface-container-low">
-    <div class="max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 text-center">
-        <div class="inline-flex items-center gap-2 bg-primary rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
-            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-            <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-white">ONLINE GIVING</span>
-        </div>
-        <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface mb-4 sm:mb-5 md:mb-6">Give Securely Online</h2>
-        <p class="text-[14px] sm:text-sm md:text-base lg:text-lg text-on-surface-variant max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed">
-            Use our secure online giving portal for one-time offerings or recurring gifts. Your generosity fuels the prophetic mandate.
-        </p>
-        <div class="bg-white p-8 sm:p-10 md:p-12 rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_20px_rgba(0,0,0,0.06)] max-w-lg mx-auto flex flex-col items-center">
-            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-primary/10 flex items-center justify-center mb-5 sm:mb-6">
-                <span class="material-symbols-outlined text-primary text-[36px] sm:text-[42px]">volunteer_activism</span>
-            </div>
-            <h3 class="font-headline text-[17px] sm:text-lg md:text-xl font-bold text-on-surface mb-2 sm:mb-3">Ready to Give?</h3>
-            <p class="text-[13px] sm:text-sm text-on-surface-variant mb-6 sm:mb-7 leading-relaxed">Click below to open our secure giving portal.</p>
+            <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface mb-4 sm:mb-5 md:mb-6">Your Giving Makes an Impact</h2>
+            <p class="text-[14px] sm:text-sm md:text-base text-on-surface-variant leading-relaxed mb-5 sm:mb-6 md:mb-8">Your generous giving empowers us to raise kingdom ambassadors, fund global missions, and provide free spiritual resources to those who seek them. Send your offering directly via Mobile Money to the numbers below.</p>
             <a href="https://givings.thecovenantoflife.com" target="_blank" class="group inline-flex items-center gap-2 bg-primary text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.08em] px-8 sm:px-10 py-3 sm:py-3.5 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
-                Give Now
+                Give Online
                 <span class="material-symbols-outlined text-[14px] sm:text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
             </a>
         </div>
-    </div>
-</section>
-
-{{-- MOBILE MONEY --}}
-<section id="mobile-money" class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
-    <div class="text-center mb-10 sm:mb-12 md:mb-16">
-        <div class="inline-flex items-center gap-2 bg-surface-container-high rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
-            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
-            <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-on-surface-variant">MOBILE MONEY</span>
-        </div>
-        <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface">Give via Mobile Money</h2>
-        <p class="text-[14px] sm:text-sm md:text-base lg:text-lg text-on-surface-variant max-w-2xl mx-auto mt-3 sm:mt-4 leading-relaxed">Send your offering directly to our mobile money accounts.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 max-w-2xl mx-auto">
-        {{-- MTN --}}
-        <div class="bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col items-center text-center hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FFCC00] flex items-center justify-center mb-4 sm:mb-5 shadow-lg shadow-[#FFCC00]/20">
-                <span class="font-headline text-[#000000] text-[18px] sm:text-[20px] font-extrabold">MTN</span>
+        {{-- Right: MoMo --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-5">
+            <div class="bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-6 sm:p-7 flex flex-col items-center text-center hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FFCC00] flex items-center justify-center mb-4 shadow-lg shadow-[#FFCC00]/20">
+                    <span class="font-headline text-[#000000] text-[16px] sm:text-[18px] font-extrabold">MTN</span>
+                </div>
+                <h3 class="font-headline text-[14px] sm:text-[15px] font-bold text-on-surface mb-1">MTN Mobile Money</h3>
+                <p class="text-[12px] sm:text-[13px] text-on-surface-variant mb-3">MoMo</p>
+                <div class="bg-surface-container-low rounded-xl px-4 py-2.5 w-full">
+                    <p class="font-headline text-[16px] sm:text-[18px] md:text-[20px] font-extrabold text-on-surface tracking-wide">+237 653 766 793</p>
+                </div>
+                <p class="text-[11px] text-on-surface-variant mt-2.5">Name: <span class="font-semibold text-on-surface">Wisdom Envoys Ministry</span></p>
             </div>
-            <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-on-surface mb-1">MTN Mobile Money</h3>
-            <p class="text-[13px] sm:text-sm text-on-surface-variant mb-4">MoMo</p>
-            <div class="bg-surface-container-low rounded-xl px-5 py-3 w-full">
-                <p class="font-headline text-[18px] sm:text-[20px] md:text-[22px] font-extrabold text-on-surface tracking-wide">+237 653 766 793</p>
+            <div class="bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-6 sm:p-7 flex flex-col items-center text-center hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FF6600] flex items-center justify-center mb-4 shadow-lg shadow-[#FF6600]/20">
+                    <span class="material-symbols-outlined text-white text-[24px] sm:text-[26px]">smartphone</span>
+                </div>
+                <h3 class="font-headline text-[14px] sm:text-[15px] font-bold text-on-surface mb-1">Orange Money</h3>
+                <p class="text-[12px] sm:text-[13px] text-on-surface-variant mb-3">OM Money</p>
+                <div class="bg-surface-container-low rounded-xl px-4 py-2.5 w-full">
+                    <p class="font-headline text-[16px] sm:text-[18px] md:text-[20px] font-extrabold text-on-surface tracking-wide">+237 655 123 456</p>
+                </div>
+                <p class="text-[11px] text-on-surface-variant mt-2.5">Name: <span class="font-semibold text-on-surface">Wisdom Envoys Ministry</span></p>
             </div>
-            <p class="text-[11px] sm:text-[12px] text-on-surface-variant mt-3">Name: <span class="font-semibold text-on-surface">Wisdom Envoys Ministry</span></p>
-        </div>
-        {{-- Orange --}}
-        <div class="bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-6 sm:p-8 flex flex-col items-center text-center hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FF6600] flex items-center justify-center mb-4 sm:mb-5 shadow-lg shadow-[#FF6600]/20">
-                <span class="material-symbols-outlined text-white text-[28px] sm:text-[32px]">smartphone</span>
-            </div>
-            <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-on-surface mb-1">Orange Money</h3>
-            <p class="text-[13px] sm:text-sm text-on-surface-variant mb-4">OM Money</p>
-            <div class="bg-surface-container-low rounded-xl px-5 py-3 w-full">
-                <p class="font-headline text-[18px] sm:text-[20px] md:text-[22px] font-extrabold text-on-surface tracking-wide">+237 655 123 456</p>
-            </div>
-            <p class="text-[11px] sm:text-[12px] text-on-surface-variant mt-3">Name: <span class="font-semibold text-on-surface">Wisdom Envoys Ministry</span></p>
         </div>
     </div>
 </section>
