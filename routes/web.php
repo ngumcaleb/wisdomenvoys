@@ -78,6 +78,7 @@ Route::get('/services', [\App\Http\Controllers\ServicePageController::class, 'in
 Route::get('/products', [\App\Http\Controllers\ProductPageController::class, 'index'])->name('products');
 Route::get('/podcasts', [\App\Http\Controllers\PodcastPageController::class, 'index'])->name('podcasts');
 Route::get('/partnership', [\App\Http\Controllers\PartnershipController::class, 'index'])->name('partnership');
+Route::get('/give', [\App\Http\Controllers\GiveController::class, 'index'])->name('give');
 
 Route::get('/services/{service:slug}', [\App\Http\Controllers\ServicePageController::class, 'show'])->name('services.show');
 

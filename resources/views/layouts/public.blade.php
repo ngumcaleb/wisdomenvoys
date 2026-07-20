@@ -72,7 +72,7 @@
                 <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 {{ request()->routeIs('products') ? 'text-primary border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary' }}" href="{{ route('products') }}">Our Products</a>
                 <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 {{ request()->routeIs('partnership') ? 'text-primary border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary' }}" href="{{ route('partnership') }}">Partnership</a>
             </div>
-            <a href="https://givings.thecovenantoflife.com/" class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] hover:bg-primary-container transition-all">
+            <a href="{{ route('give') }}" class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] hover:bg-primary-container transition-all">
                 Give to Us
             </a>
             <button id="mobile-toggle" class="md:hidden text-primary p-2">
@@ -85,7 +85,7 @@
             <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('services') }}">Our Services</a>
             <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('products') }}">Our Products</a>
             <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('partnership') }}">Partnership</a>
-            <a href="https://givings.thecovenantoflife.com/" class="bg-primary text-on-primary w-full py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] text-center">Give to Us</a>
+            <a href="{{ route('give') }}" class="bg-primary text-on-primary w-full py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] text-center">Give to Us</a>
         </div>
     </header>
 
