@@ -5,7 +5,7 @@
 {{-- HERO SECTION --}}
 @php $heroImage = !empty($settings->hero_home_image) ? $settings->hero_home_image : '/images/widomenvoys-hero.webp'; @endphp
 <section class="relative min-h-[400px] sm:min-h-[460px] md:min-h-[560px] lg:min-h-[620px] flex items-end sm:items-center overflow-hidden hero-bg" style="background-image: url('{{ $heroImage }}')">
-    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30"></div>
     <div class="absolute top-6 right-6 sm:top-10 sm:right-10 md:top-14 md:right-14 lg:top-20 lg:right-20 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 border border-white/[0.06] rounded-full pointer-events-none"></div>
     <div class="absolute bottom-10 right-12 sm:bottom-14 sm:right-16 md:bottom-20 md:right-20 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 border border-white/[0.04] rounded-full pointer-events-none"></div>
     <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 text-white w-full py-10 sm:py-14 md:py-20 lg:py-24">
