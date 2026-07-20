@@ -95,84 +95,90 @@
     </main>
 
     {{-- FOOTER --}}
-    <footer class="bg-on-secondary-fixed text-white py-20 px-6">
-        <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="space-y-6">
-                <span class="font-headline text-lg font-bold text-primary-fixed-dim">Wisdom Envoys</span>
-                <p class="text-surface-variant opacity-80 text-sm leading-relaxed">
+    <footer class="bg-on-secondary-fixed text-white py-12 sm:py-16 md:py-20 px-5 sm:px-8 md:px-10">
+        <div class="max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
+            <div class="space-y-5 sm:space-y-6">
+                <span class="font-headline text-base sm:text-lg font-bold text-primary">Wisdom Envoys</span>
+                <p class="text-white/50 text-[13px] sm:text-sm leading-relaxed">
                     An institution raising people empowered by God's Wisdom to model the Culture of God's Kingdom across every stratum and sphere of human life.
                 </p>
-                <div class="flex gap-4">
+                <div class="flex gap-3">
                     @if($settings->facebook)
-                        <a href="{{ $settings->facebook }}" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" target="_blank">
-                            <span class="material-symbols-outlined text-sm">public</span>
+                        <a href="{{ $settings->facebook }}" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 group" target="_blank">
+                            <span class="material-symbols-outlined text-primary text-[16px] sm:text-sm group-hover:text-white transition-colors">public</span>
                         </a>
                     @endif
                     @if($settings->instagram)
-                        <a href="{{ $settings->instagram }}" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" target="_blank">
-                            <span class="material-symbols-outlined text-sm">photo_camera</span>
+                        <a href="{{ $settings->instagram }}" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 group" target="_blank">
+                            <span class="material-symbols-outlined text-primary text-[16px] sm:text-sm group-hover:text-white transition-colors">photo_camera</span>
                         </a>
                     @endif
                     @if($settings->youtube)
-                        <a href="{{ $settings->youtube }}" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" target="_blank">
-                            <span class="material-symbols-outlined text-sm">smart_display</span>
+                        <a href="{{ $settings->youtube }}" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 group" target="_blank">
+                            <span class="material-symbols-outlined text-primary text-[16px] sm:text-sm group-hover:text-white transition-colors">smart_display</span>
                         </a>
                     @endif
                     @if($settings->tiktok)
-                        <a href="{{ $settings->tiktok }}" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" target="_blank">
-                            <span class="material-symbols-outlined text-sm">music_note</span>
+                        <a href="{{ $settings->tiktok }}" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 group" target="_blank">
+                            <span class="material-symbols-outlined text-primary text-[16px] sm:text-sm group-hover:text-white transition-colors">music_note</span>
                         </a>
                     @endif
                     @if($settings->email)
-                        <a href="mailto:{{ $settings->email }}" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                            <span class="material-symbols-outlined text-sm">mail</span>
+                        <a href="mailto:{{ $settings->email }}" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110 group">
+                            <span class="material-symbols-outlined text-primary text-[16px] sm:text-sm group-hover:text-white transition-colors">mail</span>
                         </a>
                     @endif
                 </div>
             </div>
             <div>
-                <h4 class="font-headline text-xs font-bold uppercase tracking-widest mb-6">Pages</h4>
-                <ul class="space-y-4 text-sm opacity-80">
-                    <li><a href="{{ route('about') }}" class="hover:text-primary-fixed-dim transition-colors">Discover Us Today</a></li>
-                    <li><a href="{{ route('services') }}" class="hover:text-primary-fixed-dim transition-colors">Our Services</a></li>
-                    <li><a href="{{ route('download.index') }}" class="hover:text-primary-fixed-dim transition-colors">Free Downloads</a></li>
-                    <li><a href="{{ route('partnership') }}" class="hover:text-primary-fixed-dim transition-colors">Partnership</a></li>
+                <h4 class="font-headline text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-5 sm:mb-6 text-white/90">Pages</h4>
+                <ul class="space-y-3 sm:space-y-4">
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('about') }}">Discover Us Today</a></li>
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('services') }}">Our Services</a></li>
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('download.index') }}">Free Downloads</a></li>
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('partnership') }}">Partnership</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-headline text-xs font-bold uppercase tracking-widest mb-6">Product</h4>
-                <ul class="space-y-4 text-sm opacity-80">
-                    <li><a href="{{ route('download.index') }}" class="hover:text-primary-fixed-dim transition-colors">Free Message Download</a></li>
-                    <li><a href="{{ route('products') }}" class="hover:text-primary-fixed-dim transition-colors">Manuals & Workbooks</a></li>
-                    <li><a href="{{ route('podcasts') }}" class="hover:text-primary-fixed-dim transition-colors">Podcasts</a></li>
+                <h4 class="font-headline text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-5 sm:mb-6 text-white/90">Product</h4>
+                <ul class="space-y-3 sm:space-y-4">
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('download.index') }}">Free Message Download</a></li>
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('products') }}">Manuals & Workbooks</a></li>
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('podcasts') }}">Podcasts</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-headline text-xs font-bold uppercase tracking-widest mb-6">Contact Info</h4>
-                <ul class="space-y-4 text-sm opacity-80">
+                <h4 class="font-headline text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-5 sm:mb-6 text-white/90">Contact Info</h4>
+                <ul class="space-y-3 sm:space-y-4">
                     @if($settings->address)
                         <li class="flex items-start gap-3">
-                            <span class="material-symbols-outlined text-primary-fixed-dim">location_on</span>
-                            <span>{{ $settings->address }}</span>
+                            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="material-symbols-outlined text-primary text-[16px] sm:text-[17px]">location_on</span>
+                            </span>
+                            <span class="text-[13px] sm:text-sm text-white/50 leading-relaxed">{{ $settings->address }}</span>
                         </li>
                     @endif
                     @if($settings->email)
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary-fixed-dim">mail</span>
-                            <span>{{ $settings->email }}</span>
+                            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-primary text-[16px] sm:text-[17px]">mail</span>
+                            </span>
+                            <span class="text-[13px] sm:text-sm text-white/50">{{ $settings->email }}</span>
                         </li>
                     @endif
                     @if($settings->phone)
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary-fixed-dim">phone</span>
-                            <span>{{ $settings->phone }}</span>
+                            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-primary text-[16px] sm:text-[17px]">phone</span>
+                            </span>
+                            <span class="text-[13px] sm:text-sm text-white/50">{{ $settings->phone }}</span>
                         </li>
                     @endif
                 </ul>
             </div>
         </div>
-        <div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-white/10 text-center opacity-50 text-sm">
-            {{ $settings->copyright ?? '© ' . date('Y') . ' Wisdom Envoys Ministry. All Rights Reserved.' }}
+        <div class="max-w-[1280px] mx-auto mt-10 sm:mt-12 md:mt-16 pt-6 sm:pt-8 border-t border-white/10 text-center">
+            <p class="text-[12px] sm:text-[13px] text-white/30">{{ $settings->copyright ?? '© ' . date('Y') . ' Wisdom Envoys Ministry. All Rights Reserved.' }}</p>
         </div>
     </footer>
 
