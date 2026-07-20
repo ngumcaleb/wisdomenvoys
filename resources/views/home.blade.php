@@ -4,25 +4,23 @@
 
 {{-- HERO SECTION --}}
 @php $heroImage = !empty($settings->hero_home_image) ? $settings->hero_home_image : '/images/widomenvoys-hero.webp'; @endphp
-<section class="relative min-h-[380px] sm:min-h-[460px] md:min-h-[560px] lg:min-h-[620px] flex items-end sm:items-center overflow-hidden hero-bg" style="background-image: url('{{ $heroImage }}')">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-primary/20"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
-    <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 text-white w-full pt-0 pb-10 sm:pt-8 sm:pb-14 md:pt-10 md:pb-16">
-        <div class="max-w-3xl lg:max-w-4xl space-y-3 sm:space-y-5 md:space-y-6 lg:space-y-8">
-            <div class="flex items-center gap-2 sm:gap-3 md:gap-4">
-                <div class="w-1 h-4 sm:h-6 md:h-8 bg-white/60 rounded-full"></div>
-                <span class="font-headline text-[9px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.18em] text-white/85">{{ $hero['eyebrow'] ?? 'We Win, Influence, Establish' }}</span>
-            </div>
-            <h1 class="font-headline text-[22px] leading-[1.12] sm:text-[34px] sm:leading-[1.1] md:text-[50px] lg:text-[66px] xl:text-[76px] font-extrabold uppercase drop-shadow-lg tracking-tight">
+<section class="relative min-h-[400px] sm:min-h-[460px] md:min-h-[560px] lg:min-h-[620px] flex items-end sm:items-center overflow-hidden hero-bg" style="background-image: url('{{ $heroImage }}')">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20"></div>
+    <div class="absolute top-6 right-6 sm:top-10 sm:right-10 md:top-14 md:right-14 lg:top-20 lg:right-20 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 border border-white/[0.06] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 right-12 sm:bottom-14 sm:right-16 md:bottom-20 md:right-20 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 border border-white/[0.04] rounded-full pointer-events-none"></div>
+    <div class="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 text-white w-full py-10 sm:py-14 md:py-20 lg:py-24">
+        <div class="max-w-3xl lg:max-w-4xl space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+            <span class="inline-block bg-primary text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.14em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg shadow-primary/30">{{ $hero['eyebrow'] ?? 'We Win, Influence, Establish' }}</span>
+            <h1 class="font-headline text-[30px] leading-[1.1] sm:text-[38px] sm:leading-[1.08] md:text-[52px] lg:text-[68px] xl:text-[78px] font-extrabold uppercase drop-shadow-lg tracking-tight">
                 {!! nl2br(e($hero['title'])) !!}
             </h1>
-            <p class="text-xs leading-relaxed sm:text-sm sm:leading-relaxed md:text-base lg:text-lg xl:text-xl text-white/80 max-w-xl lg:max-w-2xl">
+            <p class="text-[14px] leading-relaxed sm:text-base sm:leading-relaxed md:text-lg lg:text-xl xl:text-xl text-white/60 max-w-xl lg:max-w-2xl">
                 {{ $hero['subtitle'] }}
             </p>
             <div class="pt-1 sm:pt-3 md:pt-5">
-                <a class="group inline-flex items-center gap-2 bg-white text-primary px-5 py-2.5 sm:px-8 sm:py-3.5 md:px-10 md:py-4 lg:px-11 lg:py-4.5 rounded-full font-headline text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] shadow-xl hover:shadow-2xl hover:bg-white/95 transition-all duration-300" href="{{ $hero['button_one_url'] ?? '#' }}">
+                <a class="group inline-flex items-center gap-2 bg-primary text-white px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 lg:px-11 lg:py-4.5 rounded-full font-headline text-[12px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300" href="{{ $hero['button_one_url'] ?? '#' }}">
                     {{ $hero['button_one'] ?? 'Discover Us' }}
-                    <span class="material-symbols-outlined text-xs sm:text-base md:text-lg transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                    <span class="material-symbols-outlined text-sm sm:text-base md:text-lg transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
                 </a>
             </div>
         </div>
