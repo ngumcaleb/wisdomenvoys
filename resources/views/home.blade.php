@@ -47,7 +47,7 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
         @forelse($services as $service)
-            <div class="bg-surface rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] transition-shadow duration-500 group flex flex-col h-full border border-outline-variant/50">
+            <a href="{{ route('services.show', $service->slug) }}" class="block bg-surface rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-500 group flex flex-col h-full border border-outline-variant/50">
                 <div class="h-40 sm:h-48 md:h-52 lg:h-56 overflow-hidden relative">
                     @if($service->image)
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $service->image }}" alt="{{ $service->title }}">
@@ -59,16 +59,18 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-primary/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <div class="p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col flex-grow">
-                    <h3 class="font-headline text-[14px] sm:text-[15px] md:text-base font-bold mb-2.5 sm:mb-3 md:mb-4 text-on-surface leading-snug">{{ $service->title }}</h3>
-                    <p class="text-[12px] sm:text-[13px] md:text-sm text-on-surface-variant flex-grow mb-5 sm:mb-6 md:mb-7 leading-relaxed">
+                    <h3 class="font-headline text-[14px] sm:text-[15px] md:text-base font-bold mb-2.5 sm:mb-3 md:mb-4 text-on-surface leading-snug group-hover:text-primary transition-colors duration-300">{{ $service->title }}</h3>
+                    <p class="text-[12px] sm:text-[13px] md:text-sm text-on-surface-variant flex-grow leading-relaxed">
                         {{ Str::limit($service->description, 120) }}
                     </p>
-                    <a class="group/btn inline-flex items-center gap-2 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/20 self-start" href="{{ $service->button_url ?? '#' }}">
-                        {{ $service->button_text }}
-                        <span class="material-symbols-outlined text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5">arrow_forward</span>
-                    </a>
+                    <div class="mt-4 sm:mt-5">
+                        <span class="group/btn inline-flex items-center gap-2 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/20">
+                            Learn More
+                            <span class="material-symbols-outlined text-xs transition-transform duration-300 group-hover/btn:translate-x-0.5">arrow_forward</span>
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </a>
         @empty
             @foreach(range(1, 4) as $i)
                 <div class="bg-surface rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.06)] flex flex-col h-full border border-outline-variant/50">
@@ -78,8 +80,8 @@
                     <div class="p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col flex-grow">
                         <div class="h-4 sm:h-5 bg-surface-container-high rounded-md w-3/4 mb-3 sm:mb-4"></div>
                         <div class="h-2.5 sm:h-3 bg-surface-container-high rounded-full w-full mb-2"></div>
-                        <div class="h-2.5 sm:h-3 bg-surface-container-high rounded-full w-5/6 mb-5 sm:mb-6 md:mb-7"></div>
-                        <div class="h-8 sm:h-9 bg-surface-container-high rounded-full w-20 sm:w-24"></div>
+                        <div class="h-2.5 sm:h-3 bg-surface-container-high rounded-full w-5/6 flex-grow"></div>
+                        <div class="mt-4 sm:mt-5 h-3 bg-surface-container-high rounded-full w-16 sm:w-20"></div>
                     </div>
                 </div>
             @endforeach
@@ -126,54 +128,237 @@
 
 {{-- BRANCH NETWORK / DISCOVER US --}}
 @if($branches->count())
-<section class="py-20 md:py-32 max-w-[1280px] mx-auto px-6">
-    <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-        <span class="font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.1em] text-primary mb-4 block">LOCAL ROOTS, GLOBAL IMPACT</span>
-        <h2 class="font-headline text-[24px] sm:text-[32px] md:text-[40px] leading-[1.2] font-bold text-on-surface mb-6 md:mb-8">
-            <span class="after:content-[''] after:block after:w-12 sm:after:w-20 after:h-1 after:bg-primary after:mx-auto after:mt-3 sm:after:mt-4">Our Branch Network</span>
-        </h2>
+@php $branchCount = $branches->count(); @endphp
+<section class="py-14 sm:py-18 md:py-24 lg:py-28 max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16">
+        <div class="max-w-xl">
+            <div class="inline-flex items-center gap-2 bg-primary/8 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+                <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">OUR BRANCHES</span>
+            </div>
+            <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface">
+                Our Branch Network
+            </h2>
+        </div>
+        <p class="text-[13px] sm:text-sm md:text-base text-on-surface-variant leading-relaxed max-w-md md:text-right">
+            Local roots, global impact. Find a branch near you and be part of the movement.
+        </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
+
+    {{-- 1 branch: full width --}}
+    @if($branchCount === 1)
         @foreach($branches as $branch)
-            <div class="group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer">
+            <a href="{{ $branch->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[16/7] sm:aspect-[16/6] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
                 <div class="w-full h-full bg-surface-container">
                     @if($branch->cover_image)
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
                     @else
                         <div class="w-full h-full flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary/20 text-[60px] sm:text-[80px]">location_on</span>
+                            <span class="material-symbols-outlined text-primary/15 text-[80px] sm:text-[100px]">location_on</span>
                         </div>
                     @endif
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/20 to-transparent"></div>
-                <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-8">
-                    <h3 class="font-headline text-base sm:text-lg md:text-xl font-bold text-white mb-3 sm:mb-4">{{ $branch->name }}</h3>
-                    <a class="bg-white/10 backdrop-blur-md text-white border border-white/30 py-2 text-center rounded-full font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.1em] hover:bg-white hover:text-primary transition-all" href="{{ $branch->button_url ?? '#' }}">
-                        {{ $branch->button_text }}
-                    </a>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-6 sm:p-8 md:p-10">
+                    <h3 class="font-headline text-[20px] sm:text-[24px] md:text-[28px] font-bold text-white mb-3 sm:mb-4">{{ $branch->name }}</h3>
+                    <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                        {{ $branch->button_text ?? 'Explore' }}
+                        <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                    </div>
                 </div>
-            </div>
+            </a>
         @endforeach
-    </div>
+
+    {{-- 2 branches: 2 equal columns --}}
+    @elseif($branchCount === 2)
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+            @foreach($branches as $branch)
+                <a href="{{ $branch->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
+                    <div class="w-full h-full bg-surface-container">
+                        @if($branch->cover_image)
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-7">
+                        <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-white mb-2.5 sm:mb-3">{{ $branch->name }}</h3>
+                        <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                            {{ $branch->button_text ?? 'Explore' }}
+                            <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+
+    {{-- 3 branches: 3 equal columns --}}
+    @elseif($branchCount === 3)
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+            @foreach($branches as $branch)
+                <a href="{{ $branch->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
+                    <div class="w-full h-full bg-surface-container">
+                        @if($branch->cover_image)
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-7">
+                        <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-white mb-2.5 sm:mb-3">{{ $branch->name }}</h3>
+                        <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                            {{ $branch->button_text ?? 'Explore' }}
+                            <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+
+    {{-- 4 branches: 3 top, 1 centered bottom --}}
+    @elseif($branchCount === 4)
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+            @foreach($branches->take(3) as $branch)
+                <a href="{{ $branch->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
+                    <div class="w-full h-full bg-surface-container">
+                        @if($branch->cover_image)
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-7">
+                        <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-white mb-2.5 sm:mb-3">{{ $branch->name }}</h3>
+                        <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                            {{ $branch->button_text ?? 'Explore' }}
+                            <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+        <div class="mt-4 sm:mt-5 md:mt-6 flex justify-center">
+            <div class="w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.833rem)]">
+                @php $last = $branches->last(); @endphp
+                <a href="{{ $last->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
+                    <div class="w-full h-full bg-surface-container">
+                        @if($last->cover_image)
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $last->cover_image }}" alt="{{ $last->name }}">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-7">
+                        <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-white mb-2.5 sm:mb-3">{{ $last->name }}</h3>
+                        <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                            {{ $last->button_text ?? 'Explore' }}
+                            <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    {{-- 5+ branches: 3 top, 2 centered bottom, repeat --}}
+    @else
+        @php $topBranches = $branches->take(3); $bottomBranches = $branches->skip(3)->take(2); @endphp
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+            @foreach($topBranches as $branch)
+                <a href="{{ $branch->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
+                    <div class="w-full h-full bg-surface-container">
+                        @if($branch->cover_image)
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
+                        @else
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-7">
+                        <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-white mb-2.5 sm:mb-3">{{ $branch->name }}</h3>
+                        <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                            {{ $branch->button_text ?? 'Explore' }}
+                            <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+        @if($bottomBranches->count())
+            <div class="mt-4 sm:mt-5 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 max-w-[75%] mx-auto">
+                @foreach($bottomBranches as $branch)
+                    <a href="{{ $branch->button_url ?? '#' }}" class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] cursor-pointer block shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-shadow duration-500">
+                        <div class="w-full h-full bg-surface-container">
+                            @if($branch->cover_image)
+                                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ $branch->cover_image }}" alt="{{ $branch->name }}">
+                            @else
+                                <div class="w-full h-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary/15 text-[60px] sm:text-[80px]">location_on</span>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 md:p-7">
+                            <h3 class="font-headline text-[15px] sm:text-base md:text-lg font-bold text-white mb-2.5 sm:mb-3">{{ $branch->name }}</h3>
+                            <div class="inline-flex items-center gap-1.5 bg-primary text-white font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.1em] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 w-fit">
+                                {{ $branch->button_text ?? 'Explore' }}
+                                <span class="material-symbols-outlined text-[13px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+        @endif
+    @endif
 </section>
 @endif
 
 {{-- VISION & MANDATE --}}
 @if($visions->count())
-<section class="py-20 md:py-32 bg-on-secondary-fixed text-white overflow-hidden relative">
-    <div class="max-w-[1280px] mx-auto px-6 relative z-10">
-        <div class="text-center mb-12 md:mb-16">
-            <span class="font-headline text-[10px] sm:text-xs font-bold uppercase tracking-[0.1em] text-primary-fixed-dim mb-4 block">OUR CORE</span>
-            <h2 class="font-headline text-[24px] sm:text-[32px] md:text-[40px] leading-[1.2] font-bold uppercase">Vision & Mandate</h2>
+<section class="py-14 sm:py-18 md:py-24 lg:py-28 bg-on-secondary-fixed text-white overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/8 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
+    <div class="max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 relative z-10">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-5 md:gap-8 mb-10 sm:mb-12 md:mb-16">
+            <div class="max-w-xl">
+                <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-5">
+                    <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+                    <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary-fixed-dim">OUR CORE</span>
+                </div>
+                <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold uppercase">
+                    Vision & Mandate
+                </h2>
+            </div>
+            <p class="text-[13px] sm:text-sm md:text-base text-white/60 leading-relaxed max-w-md md:text-right">
+                Guided by divine purpose, driven by kingdom influence across every sphere of life.
+            </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             @foreach($visions as $vision)
-                <div class="bg-white/5 p-6 sm:p-8 md:p-12 border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary-container rounded-full flex items-center justify-center mb-5 sm:mb-6 md:mb-8">
-                        <span class="material-symbols-outlined text-white text-xl sm:text-2xl md:text-3xl">{{ $vision->icon ?? 'auto_awesome' }}</span>
+                <div class="group relative bg-white/[0.04] backdrop-blur-sm p-6 sm:p-8 md:p-10 border border-white/[0.08] rounded-2xl hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-500 overflow-hidden">
+                    <div class="absolute -top-4 -right-4 text-[100px] sm:text-[120px] font-headline font-extrabold text-white/[0.03] leading-none select-none pointer-events-none">
+                        {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
                     </div>
-                    <h3 class="font-headline text-xl sm:text-[22px] md:text-[28px] leading-[1.3] font-bold mb-4 sm:mb-5 md:mb-6">{{ $vision->title }}</h3>
-                    <p class="text-sm sm:text-base text-white/80 leading-relaxed">{{ $vision->description }}</p>
+                    <div class="relative z-10">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-primary/90 rounded-xl flex items-center justify-center mb-5 sm:mb-6 md:mb-7 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-white text-lg sm:text-xl md:text-2xl">{{ $vision->icon ?? 'auto_awesome' }}</span>
+                        </div>
+                        <h3 class="font-headline text-[17px] sm:text-lg md:text-xl lg:text-[22px] leading-[1.3] font-bold mb-3 sm:mb-4">{{ $vision->title }}</h3>
+                        <p class="text-[13px] sm:text-sm md:text-[15px] text-white/55 leading-relaxed">{{ $vision->description }}</p>
+                    </div>
                 </div>
             @endforeach
         </div>
