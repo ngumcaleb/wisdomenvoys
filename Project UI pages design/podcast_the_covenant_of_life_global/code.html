@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Podcasts | Covenant of Life Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "background": "#fff8f7",
+                "text-on-dark": "#FFFFFF",
+                "secondary-container": "#d1e1f7",
+                "on-secondary-container": "#556477",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed": "#0d1d2d",
+                "outline": "#926f6b",
+                "surface-container-low": "#fff0ee",
+                "primary-container": "#e31e24",
+                "surface": "#fff8f7",
+                "inverse-surface": "#402b29",
+                "tertiary-container": "#e7111c",
+                "on-surface": "#291715",
+                "secondary": "#516072",
+                "on-primary-fixed-variant": "#93000d",
+                "surface-dim": "#f4d2cf",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#ffb4ab",
+                "on-primary-fixed": "#410002",
+                "on-tertiary": "#ffffff",
+                "surface-container-high": "#ffe2de",
+                "surface-container": "#ffe9e6",
+                "on-surface-variant": "#5d3f3c",
+                "on-primary-container": "#fffafa",
+                "on-tertiary-container": "#fffaff",
+                "error-container": "#ffdad6",
+                "primary-fixed": "#ffdad6",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#93000a",
+                "surface-bright": "#fff8f7",
+                "surface-tint": "#c00014",
+                "tertiary-fixed": "#ffdad6",
+                "primary": "#ba0013",
+                "secondary-fixed-dim": "#b8c8de",
+                "secondary-fixed": "#d4e4fa",
+                "accent-pink": "#E91E63",
+                "on-error": "#ffffff",
+                "tertiary-fixed-dim": "#ffb4ab",
+                "on-secondary-fixed-variant": "#39485a",
+                "error": "#ba1a1a",
+                "surface-variant": "#fddbd7",
+                "on-tertiary-fixed": "#410002",
+                "on-background": "#291715",
+                "outline-variant": "#e7bdb8",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#fddbd7",
+                "tertiary": "#bb0010",
+                "surface-muted": "#F8F9FA",
+                "primary-fixed-dim": "#ffb4ab",
+                "inverse-on-surface": "#ffedea"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "content-gap": "4rem",
+                "section-gap": "8rem",
+                "grid-gutter": "2rem",
+                "container-padding": "1.5rem"
+            },
+            "fontFamily": {
+                "body-lg": ["Plus Jakarta Sans"],
+                "headline-lg": ["Montserrat"],
+                "body-md": ["Plus Jakarta Sans"],
+                "title-sm": ["Montserrat"],
+                "label-caps": ["Montserrat"],
+                "headline-md": ["Montserrat"],
+                "display-xl": ["Montserrat"],
+                "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .podcast-card-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .podcast-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 20px 40px rgba(186, 0, 19, 0.1);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 flex justify-between items-center px-container-padding max-w-[1280px] mx-auto h-20 bg-surface shadow-sm">
+<div class="flex items-center">
+<img alt="Covenant of Life Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Download</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Our Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Our Products</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Partnership</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-caps text-label-caps hover:opacity-90 transition-opacity">
+            Give to Us
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full py-section-gap overflow-hidden">
+<div class="absolute inset-0 bg-primary opacity-[0.03] -z-10"></div>
+<div class="max-w-[1280px] mx-auto px-container-padding text-center">
+<span class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-full mb-6">
+                    Apostolic Audio Mandate
+                </span>
+<h1 class="font-display-xl text-display-xl md:text-display-xl text-on-surface mb-6 max-w-4xl mx-auto">
+                    The Voice of <span class="text-primary">Life</span> Podcasts
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Deepen your spiritual walk with our curated collection of teachings, apostolic instructions, and prophetic encounters grouped by divine seasons.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="flex items-center gap-2 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary">podcasts</span>
+<span>Listen on Spotify</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary">rss_feed</span>
+<span>Listen on Apple Podcasts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Podcast Grid Section -->
+<section class="max-w-[1280px] mx-auto px-container-padding pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-grid-gutter">
+<!-- 2021 Podcast -->
+<div class="podcast-card-hover bg-white rounded-xl overflow-hidden shadow-sm flex flex-col md:flex-row group">
+<div class="w-full md:w-2/5 aspect-square relative overflow-hidden">
+<img alt="2021 Podcast Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvKQkhzkY1zy6HlN7M6HST_XGpdvtY8JBMv4z9bgaf9JPGTWZv1gNtsXiDFWSAqFQR8hdS_HTcGSuukEekFJU15keiqaPFYR622l8V-w-OKwzRKCfKog7w_xf7vldPD_t6MShYA81E5dphouAF_fsWOb_WjsSd5pGw7T_ayFN0l13IPO9RYoPELxkIjhjUpyQEmWjaVWqhLAAmdhdJlay7jqKgpjXgmmM2oU8g8n9obLZ6qOSC3OrJ56tY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="text-white font-headline-md text-headline-md">2021</span>
+</div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-primary mb-3">Dimensional Realities</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Exploring the depth of spiritual authority and the manifestation of the Kingdom through the prism of eternal life.
+                        </p>
+<button class="flex items-center gap-2 bg-primary text-on-primary w-fit px-6 py-3 rounded-lg font-label-caps text-label-caps hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            Listen Now
+                        </button>
+</div>
+</div>
+<!-- 2020 Podcast -->
+<div class="podcast-card-hover bg-white rounded-xl overflow-hidden shadow-sm flex flex-col md:flex-row group">
+<div class="w-full md:w-2/5 aspect-square relative overflow-hidden">
+<img alt="2020 Podcast Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuOkVbdPFy8MioCh8Kn5vTJ_mviPmo1Gw07k8uDlv18F-qhZpDX58pzKPvNp314J2U7Ke0b__XJifrHaztHOJnXMBdfrWEe0EVO755zepJODbW2r4pv8I8vdR1fLnKzX_F4fTWNBvE56l39gQZyF4wFCTBX70ojhGm0lL-FpdfahAPlDhYj3R-miVGL4yDcRDxHWnhmjHx0eK4k2f3VyoVOoo486l-TpWbPNrQuTfynH6O3doLLwXbpOKr_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="text-white font-headline-md text-headline-md">2020</span>
+</div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-primary mb-3">The Consecrated Life</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            A season of deep solitude and realignment, focusing on the internal architecture of a believer in times of global shift.
+                        </p>
+<button class="flex items-center gap-2 bg-primary text-on-primary w-fit px-6 py-3 rounded-lg font-label-caps text-label-caps hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            Listen Now
+                        </button>
+</div>
+</div>
+<!-- 2019 Podcast -->
+<div class="podcast-card-hover bg-white rounded-xl overflow-hidden shadow-sm flex flex-col md:flex-row group">
+<div class="w-full md:w-2/5 aspect-square relative overflow-hidden">
+<img alt="2019 Podcast Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvRAw7VHJrsO66jewuywSODIcKw6DnbF2J2Yy3kA0cgPQvEg9XRLDkmzhQO3twSwVtW9u8DXHH3EW7AtPJrfSwzDooee1Y_V2UQegoVE3fYos3iyU7AZK5xpLjeT0YhkSwNPffN6mHoiDCWFzC2Nv4re9XBEhoBcWoGGuO51jJEcMqoszEDGDGzifhoMsuHwRXMQuVsfP_6kQv-5NGwhbUPy9Jm4FgH7obxEZE9UBSGb16StWtU6Xo40whQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="text-white font-headline-md text-headline-md">2019</span>
+</div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-primary mb-3">Kingdom Governance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Strategic teachings on influencing the seven mountains of culture through apostolic mandate and professional excellence.
+                        </p>
+<button class="flex items-center gap-2 bg-primary text-on-primary w-fit px-6 py-3 rounded-lg font-label-caps text-label-caps hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            Listen Now
+                        </button>
+</div>
+</div>
+<!-- 2018 Podcast -->
+<div class="podcast-card-hover bg-white rounded-xl overflow-hidden shadow-sm flex flex-col md:flex-row group">
+<div class="w-full md:w-2/5 aspect-square relative overflow-hidden">
+<img alt="2018 Podcast Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvUuX55bkg6cCnPfbYgZVqVbWguCsfVd8W9NLR5C1JO7B9uwfAChAo9wHKqiPWAdVWRYbzUh2lFo8Mh99DHwgpZopu-lGrF8mNnqR_lRiXMufYAuqpaCzb2KMzwVN5a3mKyFxR8js6rda2Xca2iTRj5zPSgTtiwUsHfVKMhKV2V7rmvIZu4dgw0YP0upk4J_WAEpWvL1ut2k6yeOZ_PzDJucjiS1oOQjJZjvmZd6XKPUe0xTUEP86JT9uY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<span class="text-white font-headline-md text-headline-md">2018</span>
+</div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-center">
+<h3 class="font-title-sm text-title-sm text-primary mb-3">Foundational Truths</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            The inaugural series establishing the core pillars of the Covenant of Life mandate and the pursuit of divine purpose.
+                        </p>
+<button class="flex items-center gap-2 bg-primary text-on-primary w-fit px-6 py-3 rounded-lg font-label-caps text-label-caps hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            Listen Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="w-full py-section-gap bg-primary relative overflow-hidden">
+<!-- Subtle Texture Pattern (Abstract Geometric) -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="max-w-[1280px] mx-auto px-container-padding relative z-10 text-center text-white">
+<h2 class="font-headline-lg text-headline-lg mb-6">Never Miss a Teaching</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-xl mx-auto mb-10">
+                    Subscribe to our weekly audio newsletter and receive apostolic summaries and exclusive podcast clips directly in your inbox.
+                </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault()">
+<input class="flex-grow px-6 py-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 font-body-md" placeholder="Your email address" type="email"/>
+<button class="bg-white text-primary px-8 py-4 rounded-lg font-label-caps text-label-caps font-bold hover:bg-surface-container-low transition-colors">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed text-surface-variant py-section-gap px-container-padding">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-grid-gutter">
+<div class="col-span-1 md:col-span-1">
+<img alt="Logo White" class="h-10 w-auto mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+<p class="font-body-md text-body-md opacity-80">
+                    Equipping a generation with the mandate of eternal life and kingdom governance.
+                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase tracking-widest">Resources</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md hover:text-primary-fixed transition-colors" href="#">Digital Library</a></li>
+<li><a class="font-body-md hover:text-primary-fixed transition-colors" href="#">Audio Archive</a></li>
+<li><a class="font-body-md hover:text-primary-fixed transition-colors" href="#">Devotionals</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase tracking-widest">Connect</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md hover:text-primary-fixed transition-colors" href="#">Join a Cell</a></li>
+<li><a class="font-body-md hover:text-primary-fixed transition-colors" href="#">Events Calendar</a></li>
+<li><a class="font-body-md hover:text-primary-fixed transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase tracking-widest">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-white text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-white text-sm">video_library</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-white text-sm">campaign</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-white/10 text-center md:text-left">
+<p class="font-body-md text-body-md opacity-60">© 2024 Covenant of Life Global. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Reveal sections on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.podcast-card-hover').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

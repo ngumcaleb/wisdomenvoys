@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Covenant of Life | Apostolic Mandate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#93000a",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-dim": "#f4d2cf",
+                        "accent-pink": "#E91E63",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-background": "#291715",
+                        "secondary-fixed": "#d4e4fa",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#d1e1f7",
+                        "outline-variant": "#e7bdb8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-secondary-fixed": "#0d1d2d",
+                        "on-primary-fixed": "#410002",
+                        "tertiary": "#bb0010",
+                        "secondary": "#516072",
+                        "surface-container-high": "#ffe2de",
+                        "secondary-fixed-dim": "#b8c8de",
+                        "surface": "#fff8f7",
+                        "inverse-surface": "#402b29",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#fff0ee",
+                        "on-surface": "#291715",
+                        "on-primary-container": "#fffafa",
+                        "on-primary": "#ffffff",
+                        "primary": "#ba0013",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fff8f7",
+                        "on-error": "#ffffff",
+                        "primary-container": "#e31e24",
+                        "surface-container-highest": "#fddbd7",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#ffedea",
+                        "on-tertiary-fixed": "#410002",
+                        "surface-muted": "#F8F9FA",
+                        "error-container": "#ffdad6",
+                        "text-on-dark": "#FFFFFF",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "surface-variant": "#fddbd7",
+                        "on-tertiary-container": "#fffaff",
+                        "background": "#fff8f7",
+                        "surface-tint": "#c00014",
+                        "tertiary-container": "#e7111c",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary-fixed-variant": "#93000d",
+                        "on-secondary-container": "#556477",
+                        "surface-container": "#ffe9e6",
+                        "inverse-primary": "#ffb4ab",
+                        "outline": "#926f6b",
+                        "tertiary-fixed-dim": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "content-gap": "4rem",
+                        "section-gap": "8rem",
+                        "grid-gutter": "2rem",
+                        "container-padding": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "label-caps": ["Montserrat"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-xl": ["Montserrat"],
+                        "title-sm": ["Montserrat"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .testimony-slide {
+            display: none;
+        }
+        .testimony-slide.active {
+            display: block;
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface dark:bg-on-background shadow-sm h-20">
+<nav class="max-w-[1280px] mx-auto flex justify-between items-center px-container-padding h-full">
+<div class="flex items-center">
+<a href="#">
+<img alt="Covenant of Life Logo" class="h-14 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim border-b-2 border-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Download</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Our Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Our Products</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Partnership</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-caps text-label-caps hover:opacity-90 transition-opacity" href="https://givings.thecovenantoflife.com/">Give to Us</a>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[750px] md:min-h-[850px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnGB7mhEBvlGlTKV5gGI7RSCssgWlF0VYWVTnk1b4tdH-ENDuFLRGTGjkf3f86kAZD37Pf-KZXQoJwfsbyQ0IO_HmZdSFtKcSkxwjZXGpS4yjeAQxItY5RhoBP42lY5rd024w20EUIt9VDGfzRD7b7V3vm-LAvL19BuD2DHHnfL1VUG_KHccgZ8ASIU2_1f_QETrOGQzBiQOr29uM_szZbhqBUi-MmDIlpvILosG6CcXs79u_sMRuQIvGPTtnSC_vAStGpbn7yf-9W"/>
+<div class="absolute inset-0 bg-primary/85 md:bg-primary/80"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-container-padding text-white w-full">
+<div class="max-w-4xl space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-1 h-8 bg-white/50"></div>
+<span class="font-label-caps text-label-caps tracking-widest text-white/90">We Win, Influence, Establish</span>
+</div>
+<h1 class="font-display-xl text-[48px] md:text-[80px] leading-[1.1] font-extrabold text-shadow-sm uppercase">
+                    THE COVENANT OF <br/>LIFE, GLOBAL
+                </h1>
+<p class="font-body-lg text-body-lg md:text-xl opacity-90 leading-relaxed max-w-2xl">
+                    The Covenant of Life is a Prophetic and Apostolic Mandate, a New Creation Institution and a Non-Denominational Christian Organization created to engendering a Kingdom Army of Spirit-filled, thoroughly trained believers.
+                </p>
+<div class="pt-6">
+<a class="bg-white text-primary px-10 py-5 rounded-lg font-headline-md text-headline-md inline-flex items-center gap-3 hover:bg-gray-100 transition-colors shadow-xl" href="#">
+                        Discover Us
+                        <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Media Controls Overlay -->
+<div class="absolute bottom-12 right-12 flex gap-4">
+<button class="w-14 h-14 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="w-14 h-14 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">pause</span>
+</button>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap max-w-[1280px] mx-auto px-container-padding">
+<div class="text-center mb-16 relative">
+<span class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-5 font-display-xl text-display-xl uppercase select-none">Our Services</span>
+<span class="font-label-caps text-label-caps text-primary block mb-2">OUR SERVICES</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface after:content-[''] after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-4">
+                Services We Offer For You
+            </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden card-shadow group flex flex-col h-full">
+<div class="h-56 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional church meeting with a man in white robes speaking to a congregation in a modern, brightly lit sanctuary with high ceilings and clean minimalist architectural details, cinematic lighting, corporate gospel atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnGB7mhEBvlGlTKV5gGI7RSCssgWlF0VYWVTnk1b4tdH-ENDuFLRGTGjkf3f86kAZD37Pf-KZXQoJwfsbyQ0IO_HmZdSFtKcSkxwjZXGpS4yjeAQxItY5RhoBP42lY5rd024w20EUIt9VDGfzRD7b7V3vm-LAvL19BuD2DHHnfL1VUG_KHccgZ8ASIU2_1f_QETrOGQzBiQOr29uM_szZbhqBUi-MmDIlpvILosG6CcXs79u_sMRuQIvGPTtnSC_vAStGpbn7yf-9W"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-title-sm text-title-sm mb-4 text-on-surface">Weekly Convergence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 leading-relaxed">
+                        Our Convergences at the Covenant of Life are a weekly program organized to equip the saints by the Revelation of God's Word...
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps border border-primary px-6 py-2 rounded transition-colors hover:bg-primary hover:text-white" href="#">
+                        READ MORE
+                    </a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden card-shadow group flex flex-col h-full">
+<div class="h-56 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A large-scale apostolic assembly or congress held outdoors under high-end marquee tents, numerous attendees in formal attire, daytime natural lighting with vibrant primary red accents in the decor, professional church event style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBodDJk-ng7KX9xChypi5ywoQ2Xabfms7lDS7Z9bc6O42EmhXTZNhBq2IxdzXpZxI2lgNuMMPmCjdvQXrsZ0Lw8GNls5PcyEjoeuRG7VffdjjlwvH0FKpD-oJ1akupVJ-uPz29dIGI4QJAvpvleBtpViQQbRT6SveoVv82_Adm9Y6QbSda8A4aLngaf0Y7rIm45xoougFBvVYbtphgDkQXddS7oKvuVFc5DpOlYsQukppp2dfmeNcupY9fXvNu2SXcfiCrIiqaW4Ayu"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-title-sm text-title-sm mb-4 text-on-surface">Quarterly Congress</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 leading-relaxed">
+                        An assembling for a common purpose as a prophetic mandate prepared for the Elect in their various spheres...
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps border border-primary px-6 py-2 rounded transition-colors hover:bg-primary hover:text-white" href="#">
+                        READ MORE
+                    </a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden card-shadow group flex flex-col h-full">
+<div class="h-56 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A focused leadership training seminar in a modern conference room, diverse professional individuals engaged in learning, soft diffuse lighting, high-contrast corporate aesthetic with white walls and rich wood textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEBDDF-eHUocSMbYvWZzf9rpI5LvdmFYXhvvSWo7e6felZviRcow4EH0cxoyYObILXqHhFx-0ECcFMV33GgzuzcUVIlYbQ608_8f9Vv_TjqhHZBksUQHSmhkMhGFpeYV1tZJdZk9BQ6H6bO6Y2UXYwBtWz_iPGFWsHMN1LeLOc_-4n1TDY32lIzCx6T1cZ1TJzEePp3Kfqh6-gC8AHmqIZ6F-qt7yWXpurVoaz0rHfTD7pjkyHGwfY9OXPaXiZbLlhf5igkFAoND6F"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-title-sm text-title-sm mb-4 text-on-surface leading-tight">Ministry &amp; Leadership Training</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 leading-relaxed">
+                        Leadership is not completely defined until we understand it as Discipleship. We believe Leaders produce Leaders...
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps border border-primary px-6 py-2 rounded transition-colors hover:bg-primary hover:text-white" href="#">
+                        READ MORE
+                    </a>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface rounded-xl overflow-hidden card-shadow group flex flex-col h-full">
+<div class="h-56 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vibrant youth community group engaging in outdoor fellowship and sports activities, energetic atmosphere, bright afternoon sunlight, high-quality professional photography with a modern lifestyle feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXSb8Ww2kcjULesSzBkjxoQ0NWH8BdalCoJo87MQOLLE7fAIrc7pHQafr1HRyjXzAurWmZlnZShgZ2innPege1x0mKcj3s7HoQ1zhs7BpBj9hrCzNJ2_H02f2LwHVsD8ro5dNWbjpPuALc9E1jCVUpg9cTvPgiDlHGb4BseSd8ev_2lZBACmpBSah0MRNtzYcckHG7FGF7TCCo6yeByIt1xsFewCxkh6JeYepHZ6JRukwj1ULCsjBYQLn8Y5HylwEw7HTq73eXgjxP"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<h3 class="font-title-sm text-title-sm mb-4 text-on-surface">The Life Community</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 leading-relaxed">
+                        A Platform of Covenant of Life for Youth &amp; Young Adults with emphasis on building value-based relationships...
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps border border-primary px-6 py-2 rounded transition-colors hover:bg-primary hover:text-white" href="#">
+                        READ MORE
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Leader Section -->
+<section class="py-section-gap bg-surface-container-low overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-container-padding">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<!-- Text Content -->
+<div class="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-primary border-l-4 border-primary pl-4">TEAM LEADER</span>
+<h2 class="font-display-xl text-display-xl text-on-surface leading-tight">Oluwatobiloba <br/>Oshunbiyi</h2>
+</div>
+<div class="space-y-6 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p class="font-bold text-on-surface">I am Oluwatobiloba Oshunbiyi, the Team Leader at The Covenant of Life. I am an Instructor, Equipper, Kingdompreneur and Consultant.</p>
+<p>I was a SPECIALIST to the South African Tourism before my call into full time ministry. My journey began as a young boy with a lot of prophetic verdicts, visions of God and dreams with God.</p>
+<p>Confused with encounters, I started as a leader of a small youth group in Nigeria where I learned that leadership actually starts with Personal Development and influencing others. It is not an easy road but its been fulfilling!</p>
+</div>
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline-md text-headline-md inline-flex items-center gap-2 hover:opacity-90 transition-opacity" href="#">
+                        See Our Global Opportunities
+                    </a>
+</div>
+<!-- Image Side -->
+<div class="w-full lg:w-1/2 order-1 lg:order-2 relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10 border-8 border-white">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a young African male leader in a sharp blue suit with a patterned tie, arms crossed confidently, standing in a bright modern lobby with glass and steel architecture. High-end corporate lighting, clean professional aesthetic, authoritative yet warm expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXsYwexP2Oi5LWHjXStpFmNOE09MTJj6Zkk8EUn26uCMGGehnXymcdWbzVt6ofw2XSW9kThvLyMmTXxp8Za3JQ5RU4B0-KMvHLsPxdpb-kmm67auvfyBcVgJ1BCeL57KgTFbWNnzPglsO0eM1gJveGlkWlSBZ85UfKXjXwounvhx1_hLN7wgtSBJO72b4WqMlIkOtFmG3fbdNUGTp1HaB9suDGXq7GWGDECHqPGViYfYZ_iorTmtCao3vcdbLF8BPCWenR0gopgFgW"/>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-0"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-accent-pink/5 rounded-full blur-3xl -z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Discover Us Section -->
+<section class="py-section-gap max-w-[1280px] mx-auto px-container-padding">
+<div class="text-center max-w-4xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">DISCOVER US</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8 after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mx-auto after:mt-4">Who We Are</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                The Covenant of Life is a Prophetic and Apostolic Mandate, a New Creation Institution and a Non-Denominational Christian Organization created to engendering a Kingdom Army of Spirit-filled, thoroughly trained believers with a Passion to see God's Kingdom come as agents of Transformation.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-grid-gutter">
+<!-- Resource Card 1 -->
+<div class="group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a modern resource center with bookshelves and digital study stations, minimalist clean design, soft warm lighting, focused academic atmosphere with rich earth tones and bright whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_AwCR8oUm38K88vUDlox_S52Qaje6Vcq_0qoW-z6gV0CfMPMStUIRUDWBIK5wAmfkg9RNP9X7s6Xb7QvMla3PxpjTTfHtOU74Yg7OfKJl5Rc1ryjJBTAjZot1cw4RqLk-IqeFmKA2uctqfWeh7n0CHEyHylk5mR0mRqh4EYXZZWzhFUgagtPyNio47ceoq46LHRlJJIi_A-GxHq4huF69-GUJbBR9q0lofvVHOzdfwYti68_1bW1DcRH211Y4r23XVWNKyY5NhTju"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/20 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="font-headline-md text-headline-md text-white mb-4">Covenant of Life Resources</h3>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 py-2 text-center rounded-lg font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all" href="#">VISIT</a>
+</div>
+</div>
+<!-- Resource Card 2 -->
+<div class="group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A modern church training school classroom with students collaborating, bright airy lighting, minimalist furniture, high-contrast aesthetic with primary red accents on banners and branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiEugdxPx_5T4-rcBAKeU2rCmhG4MyMGSHKmkGwZmpNx8ESPFGMCg-LxMhlYENZ3taSBCgBHMWtKTeM1oKEl71aAm4YuyvrzZ19sF8fpvMMQZklzKUS1-Xy7BG9C71IaUXysJ58HXrj1G3bEZ3hDhrn85uB8U3xqxdPimReAlUBKxczXnRfeXquVlD2oUjAXhv8jywiszil3sw_2BX48a3VQjmBICsdvG9a4JkM55rs8RZ5TCiwM0PIQ5OvJW10EqtiGu6uSfFIbeh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/20 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="font-headline-md text-headline-md text-white mb-4">Life Schools</h3>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 py-2 text-center rounded-lg font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all" href="#">VISIT</a>
+</div>
+</div>
+<!-- Resource Card 3 -->
+<div class="group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of a large outdoor religious convergence in Ogun State, Nigeria. Crowds of people in formal attire, vibrant atmosphere, sunset lighting, professional documentary style photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLbfvpIlHNhTW_hF4-QasTvB0_jN1sxhKYWnx8nF1W9bkYPAYictdzhKW17fNUBnHcFX1A96SeWNPjR18UIvBc7TFUa-p_B4NBTYj2s4DivPMcTmHJLt-peC4Nh74-c9BDjIwlv8RCVADkHg7dG_h-z1WzyHl1UNpaDYPjiupveRTlSFn8mWdQbJXs7CDa5BbKdSqDxamOEC3nGjAO6ubHQ-rO5hex7SnWJfmy0w0VyLnSB6yeUJ46z-VzI8kHfEcDy3DU1iQX6qmK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/20 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="font-headline-md text-headline-md text-white mb-4">Ogun State Convergence</h3>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 py-2 text-center rounded-lg font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all" href="#">VISIT</a>
+</div>
+</div>
+<!-- Resource Card 4 -->
+<div class="group relative rounded-xl overflow-hidden aspect-[4/5] cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern urban church auditorium in Lagos, minimalist architecture with high-end sound and lighting systems, diverse congregation in praise, cinematic atmosphere, high contrast and clean lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Oj8azZ6Pp5h1w3c1TUrq5XSVwL2WYISAJzukZuoygv-v3yNIsUyMLAHH9Tke16j93zZgRmyXjDAhK-tcDSWmyLjZR6357sb4cSZk2cxK_ubdyeiVyUtB6bRY2Y2GyyGkuLT93sN30i2lzTb4NTp934R5TmR_ZlXuT8JAU5K-foIeEYhRsj9UlBRQFLJ2BBWjj4VBCGZQwK8eyeQ-LMchPNwz11phRNkCKQFkqs5eWbVGILyEZEzAeJipU4aDTfD1x78_fmM0H3FS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/20 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="font-headline-md text-headline-md text-white mb-4">Lagos Mainland Church</h3>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 py-2 text-center rounded-lg font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all" href="#">VISIT</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonies Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/80 -z-10"></div>
+<div class="max-w-[1280px] mx-auto px-container-padding text-white">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps opacity-80 mb-4 block">WHAT PEOPLE SAY</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Testimonies Of God's Faithfulness</h2>
+</div>
+<div class="max-w-4xl mx-auto relative">
+<!-- Testimonials Wrapper -->
+<div class="bg-white/95 backdrop-blur-lg rounded-2xl p-12 text-on-surface shadow-2xl relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-primary/20 absolute top-8 left-8">format_quote</span>
+<div id="testimony-container">
+<!-- Testimony 1 -->
+<div class="testimony-slide active">
+<p class="font-body-lg text-body-lg leading-relaxed mb-8 italic">
+                                "I sincerely Thank God for what he is doing to us through you there is always a man God will send to a man I know you are the one. My journey from Abuja down here is really worthwhile all I prayed for and trusted God for are coming to pass beyond what I have even requested for..."
+                            </p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary">Peter John</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Abuja, Nigeria</span>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded font-label-caps text-label-caps hover:opacity-90">READ MORE</button>
+</div>
+</div>
+<!-- Testimony 2 -->
+<div class="testimony-slide">
+<p class="font-body-lg text-body-lg leading-relaxed mb-8 italic">
+                                "Glory to God for TIAG 2025! During a night prayer session, Papa made a declaration. I received my deliverance. This had been my exact experience whenever I tried to fast. To the glory of God, my word came, and I was delivered."
+                            </p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary">Blessings Ayodele</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Nigeria</span>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded font-label-caps text-label-caps hover:opacity-90">READ MORE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation -->
+<div class="flex justify-center gap-6 mt-12">
+<button class="w-14 h-14 rounded-full bg-white text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-lg" id="prev-testimony">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-14 h-14 rounded-full bg-white text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-lg" id="next-testimony">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed text-white pt-section-gap pb-12">
+<div class="max-w-[1280px] mx-auto px-container-padding">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-grid-gutter mb-20">
+<!-- Branding -->
+<div class="lg:col-span-2 space-y-8">
+<span class="font-headline-md text-headline-md font-bold text-primary-fixed">Covenant of Life</span>
+<p class="text-surface-variant opacity-80 max-w-sm font-body-md leading-relaxed">
+                        The Covenant of Life is a Prophetic and Apostolic Mandate, a New Creation Institution and a Non-Denominational Christian Organization.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">call</span>
+</a>
+</div>
+</div>
+<!-- Pages -->
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-primary-fixed">Pages</h4>
+<ul class="space-y-4 text-surface-variant opacity-80">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Discover Us Today</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Sunday Services</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">ITLT-2026 Camp Meeting</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Join a Community</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-primary-fixed">Services</h4>
+<ul class="space-y-4 text-surface-variant opacity-80">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Lagos Mainland Church</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Ogun State Convergence</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Goshen</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Midnight Prayers</a></li>
+</ul>
+</div>
+<!-- Admin -->
+<div class="space-y-6">
+<h4 class="font-headline-md text-headline-md text-primary-fixed">Administration</h4>
+<ul class="space-y-4 text-surface-variant opacity-80">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Invitation</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Speak with a Pastor</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Givings</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Partnerships</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-surface-variant opacity-60 text-sm">
+<p>© 2024 Covenant of Life Global. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Testimony Carousel Logic
+        const slides = document.querySelectorAll('.testimony-slide');
+        const prevBtn = document.getElementById('prev-testimony');
+        const nextBtn = document.getElementById('next-testimony');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        // Simple Auto Play
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 8000);
+
+        // Header Scroll Interaction
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

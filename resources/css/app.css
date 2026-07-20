@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,6 +7,59 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-headline: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+    --color-primary: #DC143C;
+    --color-primary-container: #E8192C;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #fffafa;
+    --color-primary-fixed-dim: #ffb4ab;
+
+    --color-surface: #ffffff;
+    --color-surface-dim: #f5f5f5;
+    --color-surface-container: #f8f9fa;
+    --color-surface-container-low: #fafafa;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-high: #f0f0f0;
+    --color-surface-muted: #F8F9FA;
+    --color-surface-variant: #e8e8e8;
+
+    --color-on-surface: #1a1a2e;
+    --color-on-surface-variant: #555770;
+    --color-on-background: #1a1a2e;
+
+    --color-outline: #b0b0c0;
+    --color-outline-variant: #e0e0e8;
+
+    --color-on-secondary-fixed: #0f172a;
+    --color-on-secondary-fixed-variant: #334155;
+
+    --color-accent-pink: #E91E63;
+
+    --color-background: #ffffff;
+    --color-text-on-dark: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card-shadow {
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.05);
+}
+
+.glass-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
 }

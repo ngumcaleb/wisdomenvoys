@@ -1,0 +1,579 @@
+Wisdom Envoys Ministry Website
+Phase 1 Software Requirements Specification (SRS)
+Project Goal
+
+Build a complete Ministry Website Content Management System (CMS) that enables Wisdom Envoys administrators to manage all public website content, including sermons, ministry information, branch locations, downloadable resources, and homepage sections.
+
+This is not a Church Management System.
+
+This is not an LMS.
+
+This is not a membership platform.
+
+It is a website CMS.
+
+Deliverables
+Public Website
+Homepage
+Download Messages
+Our Services
+Our Products
+Partnership
+Give Page
+Search
+Contact
+Footer
+Global Navigation
+Admin Dashboard Modules
+Dashboard
+
+Website
+
+    Homepage
+
+    Navigation
+
+    Footer
+
+    Settings
+
+About
+
+Leadership
+
+Vision & Mandate
+
+Branches
+
+Downloads
+
+Messages
+
+Podcast
+
+Products
+
+Services
+
+Newsletter
+
+Media
+
+Contact Messages
+
+Users
+
+Roles & Permissions
+
+Website Settings
+FRONTEND PAGES
+1 Homepage
+Hero
+
+Editable
+
+Fields
+
+Title
+
+Subtitle
+
+Background Image
+
+Primary Button
+
+Secondary Button
+
+Video URL (optional)
+About Preview
+Section Title
+
+Heading
+
+Description
+
+Read More Button
+Team Leader
+Leader Image
+
+Name
+
+Position
+
+Biography
+
+CTA Button
+Vision & Mandate
+
+Cards
+
+Title
+
+Icon
+
+Description
+
+Display Order
+
+Unlimited cards.
+
+Branch Network
+
+Each branch
+
+Image
+
+Branch Name
+
+Short Description
+
+Button
+
+Button URL
+
+Slider.
+
+Call To Action
+Heading
+
+Description
+
+Primary Button
+
+Secondary Button
+Footer
+
+Editable.
+
+2 Download Page
+
+Exactly like screenshot.
+
+Contains
+
+Hero
+
+Search Bar
+
+Filter Sidebar
+
+Message Cards
+
+Newsletter
+
+Footer
+Message System
+
+Every Message Year
+
+2025
+
+2024
+
+2023
+
+2022
+
+Each year contains
+
+Messages
+
+Podcast
+
+Each Message
+
+Title
+
+Slug
+
+Description
+
+Speaker
+
+Thumbnail
+
+Audio
+
+Video
+
+PDF Notes
+
+Series
+
+Year
+
+Category
+
+Tags
+
+Search
+
+Search by title
+
+Search by speaker
+
+Search by year
+
+Search by series
+3 Our Services
+
+Contains
+
+Service Cards
+
+Each service
+
+Name
+
+Image
+
+Description
+
+Button
+
+Status
+4 Products
+
+Books
+
+Manuals
+
+Training
+
+Digital Resources
+
+Each product
+
+Image
+
+Title
+
+Category
+
+Description
+
+External Link
+
+Status
+5 Partnership
+
+Contains
+
+Hero
+
+Content
+
+Ways to Partner
+
+FAQ
+
+CTA
+
+Donation Button
+DATABASE
+users
+
+Authentication.
+
+homepage_sections
+id
+
+section_key
+
+enabled
+
+display_order
+hero_sections
+title
+
+subtitle
+
+background_image
+
+button_one
+
+button_one_url
+
+button_two
+
+button_two_url
+leaders
+name
+
+title
+
+photo
+
+bio
+
+facebook
+
+instagram
+
+linkedin
+
+youtube
+visions
+title
+
+icon
+
+description
+
+display_order
+branches
+name
+
+slug
+
+description
+
+cover_image
+
+button_text
+
+button_url
+
+location
+
+status
+message_years
+id
+
+year
+
+cover_image
+
+status
+message_categories
+id
+
+name
+series
+id
+
+title
+
+cover
+messages
+id
+
+year_id
+
+series_id
+
+category_id
+
+speaker
+
+title
+
+slug
+
+description
+
+thumbnail
+
+audio
+
+video
+
+notes
+
+published_at
+
+featured
+
+downloads
+
+status
+
+Relationships
+
+Year
+
+hasMany Messages
+
+Series
+
+hasMany Messages
+
+Category
+
+hasMany Messages
+podcasts
+message_id
+
+audio
+
+spotify
+
+apple
+
+google
+products
+title
+
+slug
+
+image
+
+description
+
+type
+
+button_text
+
+button_url
+services
+title
+
+slug
+
+image
+
+description
+
+button_text
+
+button_url
+newsletters
+email
+contacts
+name
+
+email
+
+phone
+
+subject
+
+message
+
+is_read
+settings
+site_name
+
+logo
+
+favicon
+
+email
+
+phone
+
+address
+
+facebook
+
+instagram
+
+youtube
+
+linkedin
+
+copyright
+STORAGE
+logos/
+
+hero/
+
+leaders/
+
+branches/
+
+messages/
+
+products/
+
+services/
+
+downloads/
+
+settings/
+
+Cloudflare R2.
+
+ADMIN SIDEBAR
+Dashboard
+
+Website
+
+Homepage
+
+Navigation
+
+Footer
+
+Leadership
+
+Vision & Mandate
+
+Branches
+
+Messages
+
+Series
+
+Categories
+
+Products
+
+Services
+
+Newsletter
+
+Contacts
+
+Users
+
+Roles
+
+Settings
+PERMISSIONS
+Super Admin
+
+Admin
+
+Editor
+APIs
+GET /home
+
+GET /messages
+
+GET /messages/{slug}
+
+GET /services
+
+GET /products
+
+GET /branches
+
+POST /newsletter
+
+POST /contact
+What is not included in Phase 1
+
+To keep the project focused, exclude:
+
+User/member registration
+Member login
+Prayer request portal
+Event registration
+Payment gateway integration (the Give to Us button can link externally)
+Volunteer management
+Attendance tracking
+Live streaming infrastructure (embed YouTube or another platform)
+Mobile app
+Notification system
+Multi-language support
+Definition of Done
+
+Phase 1 is complete when:
+
+The public website faithfully reproduces the approved design.
+Every piece of visible content (text, images, buttons, sections, cards, downloads) is editable through the admin panel.
+Messages and podcasts are searchable and organized by year/series/category.
+Navigation, footer, and site settings are centrally managed.
+Role-based access is implemented for administrators.
+The website is responsive, production-ready, and deployable without requiring code changes for routine content updates.
