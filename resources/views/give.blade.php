@@ -87,7 +87,7 @@
         <p class="text-[14px] sm:text-sm md:text-base lg:text-lg text-white/60 max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed">Whether a one-time offering or a recurring gift, your generosity sustains the mission of raising kingdom ambassadors across the globe.</p>
         <a class="inline-flex items-center gap-2 bg-primary text-white py-3 sm:py-3.5 px-8 sm:px-10 font-headline text-[11px] sm:text-xs font-bold uppercase tracking-[0.08em] hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 rounded-full" href="#momo-section">
             Give via Mobile Money
-            <span class="material-symbols-outlined text-[14px] sm:text-[16px]">arrow_downward</span>
+                <span class="material-symbols-outlined text-[14px] sm:text-[16px]">arrow_forward</span>
         </a>
     </div>
 </section>
