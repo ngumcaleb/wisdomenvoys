@@ -10,8 +10,10 @@ class Service extends Model
     protected $fillable = [
         'title',
         'slug',
+        'type',
         'image',
         'description',
+        'meta',
         'button_text',
         'button_url',
         'status',
@@ -21,6 +23,7 @@ class Service extends Model
     protected $casts = [
         'status' => 'boolean',
         'display_order' => 'integer',
+        'meta' => 'array',
     ];
 
     protected static function boot(): void
@@ -42,5 +45,10 @@ class Service extends Model
     public function scopeOrdered($query)
     {
         return $query->orderBy('display_order');
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
     }
 }

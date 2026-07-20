@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weekly Convergence | Covenant of Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#fddbd7",
+                        "tertiary": "#bb0010",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#ffe2de",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#93000d",
+                        "secondary": "#516072",
+                        "on-primary-container": "#fffafa",
+                        "inverse-on-surface": "#ffedea",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#e7bdb8",
+                        "surface-tint": "#c00014",
+                        "surface-bright": "#fff8f7",
+                        "secondary-fixed-dim": "#b8c8de",
+                        "outline": "#926f6b",
+                        "on-tertiary-fixed": "#410002",
+                        "inverse-primary": "#ffb4ab",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#93000a",
+                        "accent-pink": "#E91E63",
+                        "secondary-container": "#d1e1f7",
+                        "surface-muted": "#F8F9FA",
+                        "surface-variant": "#fddbd7",
+                        "on-surface-variant": "#5d3f3c",
+                        "secondary-fixed": "#d4e4fa",
+                        "on-secondary-container": "#556477",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fffaff",
+                        "surface-container": "#ffe9e6",
+                        "on-background": "#291715",
+                        "inverse-surface": "#402b29",
+                        "on-surface": "#291715",
+                        "on-secondary-fixed": "#0d1d2d",
+                        "primary": "#ba0013",
+                        "error": "#ba1a1a",
+                        "text-on-dark": "#FFFFFF",
+                        "tertiary-fixed-dim": "#ffb4ab",
+                        "surface": "#fff8f7",
+                        "surface-dim": "#f4d2cf",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "primary-container": "#e31e24",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fff8f7",
+                        "surface-container-low": "#fff0ee",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-container": "#e7111c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "8rem",
+                        "grid-gutter": "2rem",
+                        "container-padding": "1.5rem",
+                        "content-gap": "4rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "title-sm": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(186, 0, 19, 0.2);
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/95 backdrop-blur-md shadow-sm border-b border-surface-container">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center">
+<img alt="Covenant of Life Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">Convergence</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Congress</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Community</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Resources</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="hidden lg:block bg-primary text-on-primary px-6 py-2.5 rounded font-label-caps text-label-caps font-bold hover:bg-primary-container transition-all active:scale-95">JOIN US</button>
+<div class="flex items-center text-primary cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="account_circle">account_circle</span>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-white py-20 px-container-padding">
+<div class="max-w-[1280px] mx-auto text-center">
+<span class="text-primary font-label-caps text-label-caps mb-4 block tracking-widest">WEEKLY SERVICES</span>
+<h1 class="font-display-xl text-display-xl md:text-display-xl mb-6 text-on-surface">Weekly Convergence</h1>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<p class="max-w-3xl mx-auto font-body-lg text-body-lg text-secondary leading-relaxed">
+                    The Covenant of Life is a place where Kingdom Ambassadors are raised for Global Influence. We are committed to teaching the Word of God with simplicity and power, empowering you to live a life of victory.
+                </p>
+</div>
+</section>
+<!-- Why Join Section (Bento-style Cards) -->
+<section class="py-section-gap px-container-padding bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Apostolic Mandate</h2>
+<p class="text-secondary mt-2">Equipping you for the five-fold influence in the Kingdom</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-grid-gutter">
+<!-- Point 1 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high hover:-translate-y-1 transition-transform duration-300">
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="person_celebrate">person_celebrate</span>
+</div>
+<h3 class="font-title-sm text-title-sm mb-3">Ambassadors</h3>
+<p class="text-secondary text-sm">Raising individuals who represent the Kingdom of God in all spheres of life.</p>
+</div>
+<!-- Point 2 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high hover:-translate-y-1 transition-transform duration-300">
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-title-sm text-title-sm mb-3">Graces</h3>
+<p class="text-secondary text-sm">Imparting spiritual gifts and graces necessary for fulfilling your divine assignment.</p>
+</div>
+<!-- Point 3 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high hover:-translate-y-1 transition-transform duration-300">
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="key">key</span>
+</div>
+<h3 class="font-title-sm text-title-sm mb-3">Access</h3>
+<h3 class="font-title-sm text-title-sm mb-3 hidden">Access</h3> <!-- Redundancy for bento consistency -->
+<p class="text-secondary text-sm">Granting spiritual and practical keys to unlock closed doors of opportunity.</p>
+</div>
+<!-- Point 4 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high hover:-translate-y-1 transition-transform duration-300">
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="public">public</span>
+</div>
+<h3 class="font-title-sm text-title-sm mb-3">Influence</h3>
+<p class="text-secondary text-sm">Empowering saints to become voices of authority and change in their communities.</p>
+</div>
+<!-- Point 5 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-high hover:-translate-y-1 transition-transform duration-300">
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" data-icon="hub">hub</span>
+</div>
+<h3 class="font-title-sm text-title-sm mb-3">Dominion Hub</h3>
+<p class="text-secondary text-sm">A central point of fellowship where dominion is activated through collective prayer.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Locations -->
+<section class="py-section-gap px-container-padding bg-white">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Join Us This Sunday</h2>
+<p class="text-secondary mt-2">Find a location near you or join our global online community for an encounter with the Word.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                        View All Locations <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Ogun State -->
+<div class="group border border-surface-container-high rounded-xl overflow-hidden hover:border-primary transition-colors">
+<div class="h-48 overflow-hidden bg-surface-dim relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/0 transition-colors"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic, wide-angle shot of a grand church auditorium in Ogun State, Nigeria. The architectural design is modern and prestigious with high ceilings and warm ambient lighting. The atmosphere is solemn yet welcoming, reflecting the authoritative and trustworthy brand of a global ministry. Rich textures of polished wood and stone are visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCshHMz8lo4bdtCsZm72dPnFfj_MpAW12ORppS57M8xrnSjyB_JE8Bizy2dBUSt3EYMpQ2Oq7IFkug-4NT2J2KbkLn6FKMI_ecsupwx8ov-ZrdUDx_ljMXqWyQ9-xtVy6iZkLQzzIgKU_Cqh3byVXDpx9HcOnqp4r4ChoMEmYVJ0HSiCKwevb83Fnsalhv8cA8hjQhhUt8ARre2Xi1YZLuCJDi74j88FOIM-0GFuArjjjtdhyNMNY5MqIekV1uQo3xDcIZ60QPmAr0J"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-2">Ogun State Convergence</h3>
+<div class="flex items-start gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<p class="text-sm">The Covenant of Life Center, Ibafo, Ogun State.</p>
+</div>
+<div class="flex items-center gap-2 text-secondary mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<p class="text-sm font-bold">Sundays | 8:00 AM & 10:30 AM</p>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">GET DIRECTIONS</button>
+</div>
+</div>
+<!-- Lagos Mainland -->
+<div class="group border border-surface-container-high rounded-xl overflow-hidden hover:border-primary transition-colors">
+<div class="h-48 overflow-hidden bg-surface-dim relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/0 transition-colors"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant and bustling metropolitan church venue in Lagos Mainland. The interior shows a professional, high-impact stage setup with clean white walls and strategic red lighting accents. The style is modern corporate, emphasizing a sense of community and prophetic passion. High resolution and bright lighting ensure deep legibility and a welcoming vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMaixMMoGvzafvpBVwVZwgZFRAZLh-zTu-vVavmaLF_KjnbIKlGWNIuu5jC1kZGB7zopw7ezWIfQiHZLt8bTtQkHp5J8DWT0_CADa-PykpmgjKyDl24UeNP4xDe49x-Ivr-n_fsi22kwb6nAe5sYWG9010Re2ZUUC54L8N7Uka6hPy-ZNBbOcsSdvC0Jr_A26m8sbEA3Z45uBnPj5gc2VVgrbCtyZjDHFXcSqS6cOsz3qH50aTJI9N2o5P3QAkvrqptz0H5H57S5tv"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-2">Lagos Mainland Church</h3>
+<div class="flex items-start gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<p class="text-sm">Lagos Chamber of Commerce and Industry (LCCI), Alausa, Ikeja.</p>
+</div>
+<div class="flex items-center gap-2 text-secondary mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<p class="text-sm font-bold">Sundays | 9:00 AM</p>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">GET DIRECTIONS</button>
+</div>
+</div>
+<!-- Goshen Online -->
+<div class="group border border-surface-container-high rounded-xl overflow-hidden hover:border-primary transition-colors">
+<div class="h-48 overflow-hidden bg-surface-dim relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/0 transition-colors"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional high-definition broadcast studio set for a digital ministry service. Large monitors display the church logo and Scripture, while warm studio lights create a trustworthy and global broadcast atmosphere. The aesthetic is sleek, tech-forward, and accessible, representing the ministry's online presence known as Goshen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfnPgSPzRt1CErEzZgnJ21_CTMpR0RPWyU5JALuDOJ8mDMnTahKWc87cmK753s2bHT_xvfomMzS5QEUjVLckhIVxzu05wjZQGkzBeHd7dQnbXMBnBjk3fv7jbA8JQyz1WpuivZmqIUwM1cEU7vhoQqP_HHQpBPWVsUug5IK0GkCvhgwhONqods1LBT46vgZSUQjdIsgqfSVYhP0FHf6cy6qIm8AAOO_judrZmlFU6QV8ab4WTvt4ZKX8xbN3HK4oQg9WlmvSReqnWK"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-2">Goshen (Online)</h3>
+<div class="flex items-start gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+<p class="text-sm">YouTube & Facebook Live Stream.</p>
+</div>
+<div class="flex items-center gap-2 text-secondary mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<p class="text-sm font-bold">Sundays | 8:00 AM (GMT+1)</p>
+</div>
+<button class="w-full py-3 bg-primary text-white font-bold hover:bg-primary-container transition-all">WATCH LIVE</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-section-gap px-container-padding bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Moments of Convergence</h2>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="px-6 py-2 bg-primary text-white rounded-full font-label-caps text-label-caps">ALL</button>
+<button class="px-6 py-2 text-secondary hover:text-primary transition-colors font-label-caps text-label-caps">WORSHIP</button>
+<button class="px-6 py-2 text-secondary hover:text-primary transition-colors font-label-caps text-label-caps">MINISTRY</button>
+<button class="px-6 py-2 text-secondary hover:text-primary transition-colors font-label-caps text-label-caps">FELLOWSHIP</button>
+<button class="px-6 py-2 text-secondary hover:text-primary transition-colors font-label-caps text-label-caps">WORD</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Convergence Worship" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvrKwXhhQ5CoimJP1eDdaAE_3O1svE8cIjX_SP691UcwEX-PqwMF3GHwcpBRZhxnrjWrj9zsycOmK-FZ3cbI4PDAvs167axrNN-zrh8RNb3ubhA9f2-Zglc7rF9L5DvwkWBMa0Gmlx7LcP9qJkF71fhAdEhUYIk7Cs__swul_HJ22o7D0YQGkkCqF6mCRLEL3kGVM2-nKnzBul2tHBJmcbS_fNkBqljvnxOK-aMyM6EEc1ZIwP--8sTL31v"/>
+<div class="gallery-overlay absolute inset-0 bg-primary/60 opacity-0 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+<span class="text-white font-bold text-lg">Worship Experience</span>
+</div>
+</div>
+<div class="col-span-1 row-span-1 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Congregation" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtAS6pddWjy-iw-L0EYaoMorqfz-KfmNQ9kqgKQ1MnGpxKyVxlnPDWQ7-ujPXY1D1Bs_DCNDU3PTvpGJT7MACMZgwQAX7YAmxBCi59bKAeoF__jF4x4U5ecMAc2L_YOv5prAFQ1KFEXlGxj_hnOxdm8mF7-lZNghBGXs1G56mdLYra4iut1wRlEa0Ibo6YYJZr7rErhxI86CwPAbSsl3YYyVWYP6sQ7wFEX2vca3uj7rKW9l278SIowGv0"/>
+</div>
+<div class="col-span-1 row-span-2 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Speaker" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLs-ECzwc5amOIhOCnMlun3s6o71V4Y9XGbq0eEpFjMOjXav1IjAXmvZqqU9Hup8-ZdEUTpy1Wu7Cva3wZ9qY2w7uOLsB0njTsrUI5KOwtv_E21m8ie544PlGyV0zveqPqWUsD-TtNuzyWGPK_UfKIxvkp1cq5eXEgljtGKwb_kryAlb5FCoB1s5Np3ScPeLWlFUHt4Yk--dNLA1IrQGFGgZU7GOJ1PtovIHMUNEr6lxVtdpznulQOQCj6M"/>
+</div>
+<div class="col-span-1 row-span-1 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Ministries" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLsxRjVoINtS454wCzyEHF2_T0Z_Tcxv6Lu9lJNXvciHE6q2dkSIabxTLK0JkCTlcit4YzfBnYjvPQIl2UimMtTSR8tcuVRLHs-XLxnSqyc40CtPWuJDh8KAptP7pd-j7GtPGy6-tg-SeWpGJ60gqbDD8STre5i1B6SdfvYjEv0zrclKpsznDmiPr9C2T2jSmWfLR9daFgLyDN6oEbSVg2npi9udP7_hZ6kA_CQynyt-tdRvKCHu53UFFzzH"/>
+</div>
+<div class="col-span-1 row-span-2 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Choir" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLv0c0hgnppy5Ix1NpzUE2PYR7zZDwh3KABGDJnHu9oEMZJBxHcyZY1Hpb12kt5jH5SAYrJhwG5LUjHkKiVDOif8FEVt8wZs3jeyl85lP22xAsr3dm4QeUJKhLHllz13pzq0sgJiaWPo8EwehIfR2bramQ3f2jyH_eS_mRn4TxI7y4cSJ7r-25loLEV4_Vqd5nUDLTelzpgaQT8RPJA1JTbwsr4qLYBsdQgxujmdcapg9WCkiBMbjGVbm2U"/>
+</div>
+<div class="col-span-2 row-span-1 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Prayer" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuCzKgG8JzVD5BmFD-e2yD5_kxkwv2sRKvCKLX5t_znGDDfvSkvbfGRzZn5JSPw2uZv8xH3iW07fY26BNVjYsYbg3MgDhMy08xj4fHtxSR6a0VIn8VaDzm84OmsFWbESs7AJar-4oNn4NP1sKEB6wXLfpoqQnMPCe9ZhBh22mTkNjUydg4Ek9im-Xr37beVwGiRj8a6d_cq80uG69C2ODV7WaJLu_p0_yEpDnALFTPYHTqjKlPui-99B1EC"/>
+</div>
+<div class="col-span-1 row-span-1 gallery-item relative overflow-hidden rounded-xl">
+<img alt="Teaching" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLv39Jd3L3aFGzMqMznCgqKdz2EVHnnU8fu0UIniNg_UOkReFENrRFDUKh5ctQfUVQJnY7BmlRau60UcGZWXh4igKF1CgCNkxJhp24yqbVVLGEKBXgALkLyl7JRpgZsb-hSHF9oBe7eLLf2ydDKaj_oTAxJ9Gu--ai1J-kEFI3HQgVg1701-b4KJfvjfRZfTvzmsxZEVNa8IShsUGcSzhzv41hrZZVuPwjhQ_m_Nx7Ntz5FQBxPdCdA0Abfx"/>
+</div>
+</div>
+<!-- Secondary Gallery Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 auto-rows-[150px]">
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuBPmXi0lCBxfpXkJdlCRoMEj1avuwgg6CzlTMM5RbpGPBQJGbhjTc-9rPguIS-oQ1x_9Z8jsUA_e5qzLOU9c4bWs8pk4hz6Al-ZcTFuwy1wEBsef1c72MFNQbZqQU3WBoe5SSR24pn05qFEKzS9tvLA3VSOk3qqcbRcBUk8bOo7VGgy3-2bQUmekDhJ5MaV9NLWt9fs4Vbr-OBgOsK9XD-rQCxU5NjZoxCrluXHFcyQg9txA1FgGUY3EQ"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsdliaE1YQSbTwxU14HAwydCbTOC6PtOs7Q_1unCiDD_zevAdNU3mR9q24hI9rRLiudNv-RlCilNvN3Mh4BT1ihMki6FdrwOVHvZBxtCFTLFPMCjffXO8f5dX5XrEiOSd-qZtzjWmOiZ7C8v3SqLsNZWPEgX-636BF8v_gIirywUwxj3I-AnEcqYpWL2GRgqHTP01YDzzxlwi0RWSPXIkIjc-10p53DqlN6YHUO76LewstMb_DicefR-zKb"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuILt_a58fv6PL4y2N_nAED6Z2F60JVwNdtHvZr1GtAp3KV6muL7R9o94vU-QKd2PUul1mfQuC1bz0umzl_ReaH5QRxFX2lZeAw9B2FXVWRsG4QTSxIYs-Ajmy6QasRUqBWC6e6Ze9qHb7mQNdlHwTLnzYV7VIXRKFslxrVS1wgBOxzurznjJcnNQx1fUPbIPWBiNyWZ1Cwe0pNqU2eMQCnncixIlSUmHPZhzP10AS8Ln4bEbmvS6J-5N5S"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsmcIK4FLsKX5AaEF0qIwT3g2dEp-1I6_uGXyeQNpe9ZzAi4vjeSfVpo-Yw75W6cbtwJx3tU78OfDhmZmQvOnZpmWkaBEQP4RM9S-GkzoPwwOK_oRK8Qw1IofuJ18sSbI8V1Ooir3bFWLdjMuPpZzBaoeUSK8WwkB7mHl9KZlIMd6BItR7ZHBMQz4ZPhWrTKezIZRA9HWuU5Cg1FjCsxrgOmPIl_IAlgvhEtx9Xc4f-37O5GJ1Gdm_Pvgk"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu5vTFl_Bmv2q6AKn0RvgMm1-l3tIWGDM4S5oN360JvgoEDNOYpGjEwpojzBsIh9vNauvr2df7TnDfoWHUq1HcZQLxfbpiGRxmmsdp8m_PRPSaa44ToERcEtgXv9scJwCO9gMp5aOUouSwHlX6ciHtqxLxtur2vMooZ6IN7JyectYGwRM_0HF4c0Jxp0GRisRbTOKJy1JdiIjDaIXMukEHoDbH-A-bzopuWAOSBpwZ6CjePN9hKIg0ZmVCO"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsmeXwmWjDhCbnioVseCPmJpPfYLTbt_AP7PlVGEQUE0oziqRDeHS8YzW7d080IkHx7p5xbsfCgymCjpz11OVQ5lQ3hIdk8g1ZbiwmC6dPCEUSIpaB83dsqLGco7AexPokFKCu2hthRpl8BkjdQyiiuNSrtZgYTg24frUQ5WJbwGgZfL5E1YlgNWnylj4g0sdLJUdSj_8CZt9Y4UepbeLfpwkWcJONxnt0LunMxwkEusUjQUZYD-tJOIrw"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLusvWQriw3yUmJxOna7RnUctCEAmsqL3h5IlktKWkuUNY4VnABTTG7ND9ZUybiorjywIm7HEhaNFQ_AaDhqmAnEXd5r9AZWgnmhKKhT1B_fT43C1ZTN3b35h30Cg4nsUajafcqQWK2KRSc6LAh9kspKQCkUEH3wehp9HfZDB_eaJno3j6mQ1BeB_BPrEFdRGJ3rgOa6Gbohditx1ONcCMP5K9OuL8vC4uTY-VK-R-8kCfuf0D2IdK6aj6-C"/></div>
+<div class="gallery-item relative overflow-hidden rounded-xl"><img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsJnWbPjxiTEJ62DzsPjoC3yyXv58Q6F_KRBTojRmhTUbuJr6Ju8Hg5p9S0HB_GAv7O_Pf6BRg3NvgGZsYv_ZEq9Ons1VAr3eQWw_mHjBq4jo8ovuyNt-LaWtINQmtFPt96Sy8ffjpIH6S-13Nk5yj4QFF_xrgQwdBYSxzB5fNJtSCniNkdjJEfkaDq_4GFlCjrZaKqQLSz6_4nfc8bXXAAEbhJ9feI_9JkcbJiAjcjcrA5Et6YPL_1820"/></div>
+</div>
+</div>
+</section>
+<!-- Form Section (Submission) -->
+<section class="py-section-gap px-container-padding bg-on-secondary-fixed-variant/5">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Prayer Requests & Testimonies</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-8">
+                        We believe in the power of prayer and the strength of shared testimonies. Whether you are seeking a breakthrough or celebrating a miracle, we are here to stand with you.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-bold">Intercessory Support</h4>
+<p class="text-sm text-secondary">Our prayer department stands in the gap daily.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
+</div>
+<div>
+<h4 class="font-bold">Global Testimonies</h4>
+<p class="text-sm text-secondary">Your victory can inspire faith in someone else.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-surface-container">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2">FULL NAME</label>
+<input class="w-full px-4 py-3 border border-surface-dim rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2">EMAIL ADDRESS</label>
+<input class="w-full px-4 py-3 border border-surface-dim rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2">SUBMISSION TYPE</label>
+<select class="w-full px-4 py-3 border border-surface-dim rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<option>Prayer Request</option>
+<option>Testimony</option>
+<option>Counseling</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2">YOUR MESSAGE</label>
+<textarea class="w-full px-4 py-3 border border-surface-dim rounded focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded hover:bg-primary-container transition-all active:scale-[0.98] shadow-lg shadow-primary/20" type="submit">SUBMIT TO THE MANDATE</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Contact Info Section -->
+<section class="py-20 px-container-padding bg-white">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center md:text-left">
+<h4 class="font-label-caps text-label-caps text-primary mb-4">PHONE</h4>
+<p class="text-headline-md font-bold text-on-surface">+234 (0) 803 000 0000</p>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-label-caps text-label-caps text-primary mb-4">EMAIL</h4>
+<p class="text-headline-md font-bold text-on-surface">info@thecovenantoflife.com</p>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-label-caps text-label-caps text-primary mb-4">OFFICE HOURS</h4>
+<p class="text-headline-md font-bold text-on-surface">Mon - Fri: 9am - 5pm</p>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-label-caps text-label-caps text-primary mb-4">SOCIAL</h4>
+<div class="flex justify-center md:justify-start gap-4 mt-2">
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer" data-icon="facebook">face_nod</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer" data-icon="play_circle">play_circle</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer" data-icon="share">share</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="full-width bg-[#081828] text-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-container-padding py-section-gap max-w-[1280px] mx-auto">
+<div class="col-span-1">
+<h3 class="text-headline-md font-headline-md text-white mb-6">Covenant of Life</h3>
+<p class="text-white/60 text-sm leading-relaxed mb-6">
+                    Raising Kingdom Ambassadors for Global Influence. A ministry founded on the Apostolic Mandate to reach the ends of the earth.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white/40 hover:text-white cursor-pointer" data-icon="public">public</span>
+<span class="material-symbols-outlined text-white/40 hover:text-white cursor-pointer" data-icon="mail">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary-fixed-dim mb-6 tracking-widest">PROGRAMS</h4>
+<ul class="space-y-4">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Weekly Convergence</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Quarterly Congress</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">The Life Community</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Missions Outreaches</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary-fixed-dim mb-6 tracking-widest">RESOURCES</h4>
+<ul class="space-y-4">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Sermon Library</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Audio Store</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Publications</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">E-Books</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary-fixed-dim mb-6 tracking-widest">ADMINISTRATION</h4>
+<ul class="space-y-4">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Contact Us</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">About the Mandate</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 inline-block" href="#">Giving & Partnerships</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-container-padding">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/40 text-xs uppercase tracking-widest">© 2024 The Covenant of Life Global. All Rights Reserved. Apostolic Mandate.</p>
+<div class="flex gap-8 text-xs font-label-caps text-white/40">
+<a class="hover:text-white" href="#">TERMS</a>
+<a class="hover:text-white" href="#">PRIVACY</a>
+<a class="hover:text-white" href="#">COOKIES</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for gallery hover
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const overlay = item.querySelector('.gallery-overlay');
+                if (overlay) overlay.style.opacity = '1';
+            });
+            item.addEventListener('mouseleave', () => {
+                const overlay = item.querySelector('.gallery-overlay');
+                if (overlay) overlay.style.opacity = '0';
+            });
+        });
+
+        // Form Submission visual feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'SENDING...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                btn.innerText = 'MESSAGE SENT SUCCESSFULLY';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-600');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-50');
+                    btn.classList.add('bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

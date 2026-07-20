@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quarterly Congress | Covenant of Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#fddbd7",
+                      "tertiary": "#bb0010",
+                      "on-error": "#ffffff",
+                      "surface-container-high": "#ffe2de",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#93000d",
+                      "secondary": "#516072",
+                      "on-primary-container": "#fffafa",
+                      "inverse-on-surface": "#ffedea",
+                      "primary-fixed-dim": "#ffb4ab",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#e7bdb8",
+                      "surface-tint": "#c00014",
+                      "surface-bright": "#fff8f7",
+                      "secondary-fixed-dim": "#b8c8de",
+                      "outline": "#926f6b",
+                      "on-tertiary-fixed": "#410002",
+                      "inverse-primary": "#ffb4ab",
+                      "tertiary-fixed": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#93000a",
+                      "accent-pink": "#E91E63",
+                      "secondary-container": "#d1e1f7",
+                      "surface-muted": "#F8F9FA",
+                      "surface-variant": "#fddbd7",
+                      "on-surface-variant": "#5d3f3c",
+                      "secondary-fixed": "#d4e4fa",
+                      "on-secondary-container": "#556477",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#fffaff",
+                      "surface-container": "#ffe9e6",
+                      "on-background": "#291715",
+                      "inverse-surface": "#402b29",
+                      "on-surface": "#291715",
+                      "on-secondary-fixed": "#0d1d2d",
+                      "primary": "#ba0013",
+                      "error": "#ba1a1a",
+                      "text-on-dark": "#FFFFFF",
+                      "tertiary-fixed-dim": "#ffb4ab",
+                      "surface": "#fff8f7",
+                      "surface-dim": "#f4d2cf",
+                      "on-secondary-fixed-variant": "#39485a",
+                      "primary-container": "#e31e24",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fff8f7",
+                      "surface-container-low": "#fff0ee",
+                      "primary-fixed": "#ffdad6",
+                      "on-primary-fixed": "#410002",
+                      "tertiary-container": "#e7111c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-gap": "8rem",
+                      "grid-gutter": "2rem",
+                      "container-padding": "1.5rem",
+                      "content-gap": "4rem"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Montserrat"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "title-sm": ["Montserrat"],
+                      "display-xl": ["Montserrat"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "label-caps": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "headline-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-link-active {
+            border-bottom: 2px solid #ba0013;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/95 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Covenant of Life Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+<span class="text-title-sm font-headline-md font-bold text-primary">Covenant of Life</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-secondary font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="#">Convergence</a>
+<a class="font-label-caps text-label-caps text-secondary font-medium hover:text-primary transition-colors" href="#">Congress</a>
+<a class="font-label-caps text-label-caps text-secondary font-medium hover:text-primary transition-colors" href="#">Community</a>
+<a class="font-label-caps text-label-caps text-secondary font-medium hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-primary text-on-primary px-6 py-2 rounded font-label-caps text-label-caps hover:bg-tertiary transition-all active:scale-95">Join Us</button>
+<span class="material-symbols-outlined text-primary cursor-pointer" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-primary-container text-white py-20 px-6">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<!-- Atmospheric background element -->
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-tertiary via-primary to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] w-full text-center">
+<h1 class="font-display-xl text-display-xl mb-6 leading-tight">Quarterly Congress</h1>
+<p class="font-body-lg text-body-lg max-w-3xl mx-auto opacity-90 mb-10">
+                    At Covenant of Life there are three congresses prepared for the Elect and the Believers of Christ Jesus, each uniquely designed to foster spiritual maturity, apostolic leadership, and corporate intercession.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="bg-white text-primary font-label-caps text-label-caps px-10 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all" href="#register">Register Now</a>
+<a class="border-2 border-white text-white font-label-caps text-label-caps px-10 py-4 rounded-lg font-bold hover:bg-white/10 transition-all" href="#details">Learn More</a>
+</div>
+</div>
+</section>
+<!-- Annual Congress List (Quick Glance) -->
+<section class="py-24 px-6 max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- THIRST -->
+<div class="bg-surface-container-low p-8 border-l-4 border-primary rounded shadow-sm hover:translate-y-[-4px] transition-transform">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">THIRST 2026</h3>
+<p class="font-label-caps text-label-caps text-secondary mb-4">MARCH 26TH - 29TH</p>
+<p class="text-body-md opacity-75">The Spiritual Hunger and Intense Revival Seeking Time.</p>
+</div>
+<!-- ITLT -->
+<div class="bg-surface-container-low p-8 border-l-4 border-primary rounded shadow-sm hover:translate-y-[-4px] transition-transform">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">ITLT 2026</h3>
+<p class="font-label-caps text-label-caps text-secondary mb-4">JUNE 15TH - 19TH</p>
+<p class="text-body-md opacity-75">Intensive Theological Leadership Training.</p>
+</div>
+<!-- TIAG -->
+<div class="bg-surface-container-low p-8 border-l-4 border-primary rounded shadow-sm hover:translate-y-[-4px] transition-transform">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">TIAG 2026</h3>
+<p class="font-label-caps text-label-caps text-secondary mb-4">OCTOBER 10TH - 14TH</p>
+<p class="text-body-md opacity-75">The Intercessory Apostolic Gathering.</p>
+</div>
+</div>
+</section>
+<!-- Congress Details: Deep Dive -->
+<section class="py-24 space-y-section-gap" id="details">
+<!-- 01 THIRST -->
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<span class="text-primary font-bold text-headline-lg opacity-20 block mb-2">01</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">THIRST - The Spiritual Hunger</h2>
+<p class="text-body-lg mb-6 text-on-surface-variant">
+                        THIRST is more than a gathering; it's a divine appointment for those whose souls pant after God. This congress focuses on spiritual renewal, deep intimacy with the Father, and the awakening of spiritual gifts within the believer.
+                    </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Deep immersions in corporate worship and prophetic chants.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Deliverance and healing services led by the presbytery.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Impartation sessions for ministerial efficiency.</span>
+</li>
+</ul>
+</div>
+<div class="order-1 md:order-2">
+<div class="rounded-xl overflow-hidden shadow-2xl transform rotate-1">
+<img class="w-full h-auto object-cover" data-alt="A profound spiritual gathering in a high-ceilinged modern cathedral during the THIRST congress. Sunlight streams through large windows onto a diverse congregation of worshippers with raised hands. The atmosphere is ethereal and sacred, with a color palette of warm creams and sharp red accents from the ministry's banners. The lighting is dramatic and reverent, capturing the intensity of revival." src="https://lh3.googleusercontent.com/aida/AP1WRLu0QhfvKMzb8mUWeMxsWAydCii_7AWxYwMm-9m7W69n9aeErYu0Xiar8bfqfL5xmi-uhpin_YovJeGRnrT1BezOtUcC5wXq6ZCNjIa24dtcGRLmmSSMkTi0nIn_JDSUFim6VnSGbMUVOFhbveRv4X3yX7MPqhuB4b28gdNuGoH5aAVwPhBrQzCPfIdHAEMHhRqzIje8wgaoLtV6XNOWMi4XxqH5DBiPmcsKBa1wRItRjLPR-UQAjV6SGcVP"/>
+</div>
+</div>
+</div>
+<!-- 02 ITLT -->
+<div class="bg-surface-container-low py-24">
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<div class="rounded-xl overflow-hidden shadow-2xl transform -rotate-1">
+<img class="w-full h-auto object-cover" data-alt="A focused academic and theological training seminar at the Covenant of Life Congress. Participants are seated at long tables with notebooks and Bibles, looking towards a speaker on a modern stage. The room is designed with professional, corporate aesthetics featuring clean lines and a deep red branding motif. The lighting is bright and crisp, emphasizing a scholarly yet spiritually charged learning environment." src="https://lh3.googleusercontent.com/aida/AP1WRLuB3hGDnR8TF1zNOnaeAhNqt7AXG6HOADHCkpzto2ZS_XtwEby_wj5oAao6f91diU9Nro057_RAMcr58ixzQuFMBFdIh9bEFLhE6bk01L1K4xFuWS2JlrB1WFBNwE3bXvXHlDcsvxdGUOiluwf3dAn_NXpL-UT528pqcVarOWy0FHwM5RcirFL-jPedpcs2ndrbqLPpV_wMnwaCi8DZZUqMTXBzF6EJ_CCKTrTKd_zs2RJdI8eHfbg-IflM"/>
+</div>
+</div>
+<div>
+<span class="text-primary font-bold text-headline-lg opacity-20 block mb-2">02</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">ITLT - Leadership Training</h2>
+<p class="text-body-lg mb-6 text-on-surface-variant">
+                            The Intensive Theological Leadership Training (ITLT) is designed for those called into the five-fold ministry and marketplace leadership. It provides a structured curriculum for doctrinal soundess and administrative excellence.
+                        </p>
+<div class="bg-white p-6 rounded shadow-sm border-t-2 border-primary">
+<h4 class="font-title-sm text-title-sm mb-2">Key Focus Areas</h4>
+<p class="text-body-md opacity-80">Systematic Theology, Ecclesiology, Servant Leadership, and Spiritual Jurisprudence.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 03 TIAG -->
+<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<span class="text-primary font-bold text-headline-lg opacity-20 block mb-2">03</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">TIAG - Intercessory Gathering</h2>
+<p class="text-body-lg mb-6 text-on-surface-variant">
+                        The Intercessory Apostolic Gathering (TIAG) is the "Engine Room" of the Mandate. It is here that regional strategies are birthed through heavy intercession and prophetic decrees over nations.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 border border-outline-variant rounded">
+<span class="material-symbols-outlined text-primary mb-2">public</span>
+<h5 class="font-bold">Global Impact</h5>
+<p class="text-sm opacity-70">Prayers for the continents.</p>
+</div>
+<div class="p-4 border border-outline-variant rounded">
+<span class="material-symbols-outlined text-primary mb-2">shield_with_heart</span>
+<h5 class="font-bold">Preservation</h5>
+<p class="text-sm opacity-70">Securing the remnant.</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="rounded-xl overflow-hidden shadow-2xl transform rotate-1">
+<img class="w-full h-auto object-cover" data-alt="A powerful group of intercessors kneeling in a circular formation within a minimalist hall during the TIAG gathering. The scene is lit with cool blue tones and warm red highlights, creating a cinematic and spiritual depth. The participants show deep focus and devotion. The architectural style of the space is modern with clean white walls and polished floors that reflect the dramatic lighting." src="https://lh3.googleusercontent.com/aida/AP1WRLtuZYgYvdWv23UvrqV8EyLKFTh528heX_-TcmNTyX4J7m1rQUvdtoKs0FHJ_bdCgYd4Wz_5ELSsgGIhN-nhohyEduD2oYcKccmCtpb8Cn5eDbl2dwfhDjWxZqBBXqo8_4ChsgSIVQL7sma8R4osVY_gn-6EkIsA9jXInOQodxUuWHz8WHSgSKD68i0ox3iDc6uCqMwIbohiLA79GeSXEYxkfYVd9aXCM3DF8uxub3--FWQLssQ_XfYHmh8z"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form -->
+<section class="py-24 bg-on-secondary-fixed text-white overflow-hidden relative" id="register">
+<div class="max-w-[800px] mx-auto px-6 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Congress Registration Form</h2>
+<p class="opacity-70">Secure your place in the upcoming assembly of the Elect.</p>
+</div>
+<form class="space-y-8 bg-white/5 p-10 rounded-2xl backdrop-blur-md border border-white/10 shadow-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Full Name</label>
+<input class="w-full bg-transparent border-white/20 rounded focus:border-primary focus:ring-1 focus:ring-primary text-white" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Email Address</label>
+<input class="w-full bg-transparent border-white/20 rounded focus:border-primary focus:ring-1 focus:ring-primary text-white" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Phone Number</label>
+<input class="w-full bg-transparent border-white/20 rounded focus:border-primary focus:ring-1 focus:ring-primary text-white" placeholder="+234 ..." type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Congress Selection</label>
+<select class="w-full bg-neutral-900 border-white/20 rounded focus:border-primary focus:ring-1 focus:ring-primary text-white">
+<option>Select Congress</option>
+<option>THIRST 2026</option>
+<option>ITLT 2026</option>
+<option>TIAG 2026</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Home Address</label>
+<textarea class="w-full bg-transparent border-white/20 rounded focus:border-primary focus:ring-1 focus:ring-primary text-white" rows="2"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Gender</label>
+<select class="w-full bg-neutral-900 border-white/20 rounded">
+<option>Male</option>
+<option>Female</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Marital Status</label>
+<select class="w-full bg-neutral-900 border-white/20 rounded">
+<option>Single</option>
+<option>Married</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Volunteer?</label>
+<select class="w-full bg-neutral-900 border-white/20 rounded">
+<option>No</option>
+<option>Yes</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Corporate Information / Occupation</label>
+<input class="w-full bg-transparent border-white/20 rounded" type="text"/>
+</div>
+<div class="flex items-center gap-4 py-4">
+<input class="rounded text-primary focus:ring-primary bg-transparent border-white/20" type="checkbox"/>
+<label class="text-sm opacity-80">I require campus accommodation during the congress period.</label>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs opacity-70">Your Expectations</label>
+<textarea class="w-full bg-transparent border-white/20 rounded focus:border-primary focus:ring-1 focus:ring-primary text-white" placeholder="What do you hope to receive from this congress?" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary py-4 rounded-lg font-bold text-headline-md hover:bg-tertiary transition-colors shadow-lg active:scale-95" type="submit">Complete Registration</button>
+</form>
+</div>
+</section>
+<!-- Gallery / Archives -->
+<section class="py-24 px-6 max-w-[1280px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg">Congress Archives</h2>
+<p class="text-on-surface-variant">Reliving the moments of glory and prophetic encounters.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-6 py-2 rounded-full bg-primary text-white font-label-caps text-xs">2025 HIGHLIGHTS</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-secondary font-label-caps text-xs hover:bg-surface-variant transition-colors">VIEW ALL</button>
+</div>
+</div>
+<div class="bento-grid">
+<div class="col-span-2 row-span-1 rounded-xl overflow-hidden group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide panoramic shot of thousands of believers gathered at an outdoor night rally for the Covenant of Life Congress. The stage glows with vibrant red and soft white lights, with large LED screens displaying prophetic scriptures. The sky is a deep indigo, and the atmosphere is electric with prayer. The photography is professional, high-contrast, and emphasizes the scale of the ministry." src="https://lh3.googleusercontent.com/aida/AP1WRLvpCG8Up1_iVAkYBJgTVYHDQ45IYnZYXYCuY5wgV2MN6uH_8Xt-lRSC_4IAA1go4l-HPw8eeEBT_AK_YtTILJ2uXjLLoeEN9vVQavd5AY1IMZ5XpSbiNN-zTUfML2E6ijVPQGXTKWC1dReVLiBZdwmkdrw7hjcdzvoU_SwhZbaGIOJ4wE4hDBb_u1Lrdnk3kt4qrzVawgtE0K14xkvwfsEsdYGXfjohgBMSVlzkM5uV_c8q9QkdvS5kcciE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+<h4 class="text-white font-bold">TIAG 2025 Opening</h4>
+</div>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A detailed close-up of a spiritual leader during a session at the Covenant of Life Congress. The focus is sharp, capturing an expression of intense passion and divine authority. The background is softly blurred with warm bokeh effects from the venue's lighting. The aesthetic is modern-corporate with a touch of spiritual gravitas." src="https://lh3.googleusercontent.com/aida/AP1WRLuQvuxkQyO84TlOE4aKwTQwqcFCLxT7itESGBpVCdgL4nfXQHFaLlMqroOSRkkb29arfo8oEysrvZNlfbDMYStDszSspVWJpsolxeJNtJmxql0vqHPQjFIpJc3fFTHIYfcgn2Cki7OikRbykN_u55Sj3KGndrntiZFOMyTqJzLnctRxNIOj0IuVcOo_hg0Jr2jacz5uECP6EbFK7DfKXuYLzP6011Jz-hY9QiXt5_T9qQndkjkQzDhu7Yw"/>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A candid photo of young adults engaged in a deep theological discussion during a breakout session at the Covenant of Life Congress. They are surrounded by modern furniture in a bright, airy gallery space. The brand's red accent is subtly visible in their badges and the room's decor. The lighting is natural and flattering, reflecting a community-focused warmth." src="https://lh3.googleusercontent.com/aida/AP1WRLvqeSj3jfgabWU17tuuOjxhmNGbwKbbOAt-NrYz_PgtPwa07hKXj-jRmg8lObdub3_sp_jF-giEYi1yFI-TcGrJDOiLKlgcHOsufrkgyN2_ulxr4DpKtRXaoYnb58if3-as_kieReWKa9owB92MkRE2_E1ZXPZMRm-EfCDorSDOKI_rAkENakRpua-x14icdpMqcr1Qoh7UN2KXQaaPjTStdgfRGEGIeXYcXsFWfzdNppDebMne6wnQNYLm"/>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An artistic high-angle shot of a beautifully organized auditorium during a moment of silent prayer at the Congress. The rows of seating are perfectly aligned, creating a structured and authoritative visual pattern. The color palette is dominated by neutral tones with striking red highlights. The lighting creates soft shadows, adding to the contemplative and peaceful mood." src="https://lh3.googleusercontent.com/aida/AP1WRLvCFUqxfYCbdce3rDT6q_332cl9J6dYynfZv7iC5uASbPfHOXWwzzIBkCOqKlJ8fSJ2h5fg_WdKYUAcXZXJXMjMgCFmYAGZ4fZLTw03p-p1HR2EKe8FTjWp2ypQvnJu9e8IsrqKCXp_TIDKLyrCX2BZ1e7W_Wz2VnzLT3kIAmm_RJdNYkC-ITBkFewSBtzuH3BlhWuphQC4aseuf7eXJTQjfIV-MxCocXtQ-3FuVtCXw4PXdhz399dqKZjX"/>
+</div>
+<div class="col-span-3 row-span-1 rounded-xl overflow-hidden group relative">
+<div class="absolute inset-0 bg-primary/80 flex flex-col items-center justify-center text-center p-10">
+<span class="material-symbols-outlined text-white text-6xl mb-4">play_circle</span>
+<h3 class="text-white font-headline-md mb-2">Watch 2025 Recap</h3>
+<p class="text-white/80 max-w-md">Experience the transformative power of the previous year's congress through our official highlight reel.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#081828] text-white">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-container-padding py-section-gap max-w-[1280px] mx-auto">
+<!-- Brand Section -->
+<div class="space-y-6">
+<h2 class="text-headline-md font-headline-md text-white">Covenant of Life</h2>
+<p class="text-white/60 text-body-md">An Apostolic Mandate dedicated to the maturity of the Elect and the advancement of God's Kingdom on earth.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<!-- Programs -->
+<div class="space-y-4">
+<h4 class="font-headline-md text-white border-b border-white/10 pb-2">Programs</h4>
+<ul class="space-y-2">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Weekly Convergence</a></li>
+<li><a class="text-primary-fixed-dim underline" href="#">Quarterly Congress</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">The Life Community</a></li>
+</ul>
+</div>
+<!-- Resources -->
+<div class="space-y-4">
+<h4 class="font-headline-md text-white border-b border-white/10 pb-2">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Sermon Archives</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Study Materials</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Ministries</a></li>
+</ul>
+</div>
+<!-- Administration -->
+<div class="space-y-4">
+<h4 class="font-headline-md text-white border-b border-white/10 pb-2">Administration</h4>
+<ul class="space-y-2">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Contact Us</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Volunteer Portal</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 text-center px-6">
+<p class="text-white/40 text-xs font-label-caps">© 2024 The Covenant of Life Global. All Rights Reserved. Apostolic Mandate.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky Nav logic
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

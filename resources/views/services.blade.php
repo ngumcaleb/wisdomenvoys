@@ -43,7 +43,7 @@
                             <span class="material-symbols-outlined text-primary text-4xl mb-4">church</span>
                             <h3 class="font-headline text-[28px] leading-[1.3] font-bold text-on-surface mb-4">{{ $service->title }}</h3>
                             <p class="text-base text-on-surface-variant mb-6 leading-relaxed">{{ $service->description }}</p>
-                            <a class="inline-flex items-center gap-2 bg-primary text-white font-headline text-xs font-bold uppercase tracking-[0.1em] px-6 py-2.5 rounded-full transition-colors hover:bg-primary-container" href="{{ $service->button_url ?? '#' }}">
+                            <a class="inline-flex items-center gap-2 bg-primary text-white font-headline text-xs font-bold uppercase tracking-[0.1em] px-6 py-2.5 rounded-full transition-colors hover:bg-primary-container" href="{{ route('services.show', $service) }}">
                                 {{ $service->button_text }} <span class="material-symbols-outlined text-sm">arrow_forward</span>
                             </a>
                         </div>
@@ -59,7 +59,7 @@
                         <div class="relative z-10 p-10 md:p-12 h-full flex flex-col justify-end text-white">
                             <h3 class="font-headline text-[28px] leading-[1.3] font-bold mb-4">{{ $service->title }}</h3>
                             <p class="text-lg mb-6 max-w-xl text-white/90">{{ $service->description }}</p>
-                            <a class="inline-block bg-white text-primary px-8 py-3 font-headline text-xs font-bold uppercase tracking-[0.1em] rounded-full hover:bg-surface-container transition-colors" href="{{ $service->button_url ?? '#' }}">{{ $service->button_text }}</a>
+                            <a class="inline-block bg-white text-primary px-8 py-3 font-headline text-xs font-bold uppercase tracking-[0.1em] rounded-full hover:bg-surface-container transition-colors" href="{{ route('services.show', $service) }}">{{ $service->button_text }}</a>
                         </div>
                     </div>
                 @else
@@ -77,7 +77,7 @@
                         <div class="p-8 flex-grow">
                             <h3 class="font-headline text-base font-semibold text-on-surface mb-4">{{ $service->title }}</h3>
                             <p class="text-sm text-on-surface-variant mb-6">{{ Str::limit($service->description, 100) }}</p>
-                            <a class="inline-flex items-center gap-2 bg-primary text-white font-headline text-xs font-bold uppercase tracking-[0.1em] px-6 py-2.5 rounded-full transition-colors hover:bg-primary-container" href="{{ $service->button_url ?? '#' }}">
+                            <a class="inline-flex items-center gap-2 bg-primary text-white font-headline text-xs font-bold uppercase tracking-[0.1em] px-6 py-2.5 rounded-full transition-colors hover:bg-primary-container" href="{{ route('services.show', $service) }}">
                                 {{ $service->button_text }} <span class="material-symbols-outlined text-sm">arrow_forward</span>
                             </a>
                         </div>

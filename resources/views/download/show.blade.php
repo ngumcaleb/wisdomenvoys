@@ -54,14 +54,17 @@
                 @if($message->description)
                     <p class="text-white/70 leading-relaxed mb-8">{{ $message->description }}</p>
                 @endif
-                <div class="flex flex-wrap gap-4">
-                    @if($message->audio)
-                        <a href="{{ $message->audio }}" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-white px-6 py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors">
+                @if($message->audio)
+                    <div class="mb-6">
+                        <x-audio-player src="{{ $message->audio }}" :title="$message->title" :speaker="$message->speaker" :thumbnail="$message->thumbnail" />
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="{{ $message->audio }}" download class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] hover:bg-white/20 transition-colors">
                             <span class="material-symbols-outlined text-[18px]">download</span>
                             Download Audio
                         </a>
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

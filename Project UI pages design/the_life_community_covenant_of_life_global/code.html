@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Life Community | Covenant of Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#fddbd7",
+                    "tertiary": "#bb0010",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#ffe2de",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#93000d",
+                    "secondary": "#516072",
+                    "on-primary-container": "#fffafa",
+                    "inverse-on-surface": "#ffedea",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#e7bdb8",
+                    "surface-tint": "#c00014",
+                    "surface-bright": "#fff8f7",
+                    "secondary-fixed-dim": "#b8c8de",
+                    "outline": "#926f6b",
+                    "on-tertiary-fixed": "#410002",
+                    "inverse-primary": "#ffb4ab",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#93000a",
+                    "accent-pink": "#E91E63",
+                    "secondary-container": "#d1e1f7",
+                    "surface-muted": "#F8F9FA",
+                    "surface-variant": "#fddbd7",
+                    "on-surface-variant": "#5d3f3c",
+                    "secondary-fixed": "#d4e4fa",
+                    "on-secondary-container": "#556477",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fffaff",
+                    "surface-container": "#ffe9e6",
+                    "on-background": "#291715",
+                    "inverse-surface": "#402b29",
+                    "on-surface": "#291715",
+                    "on-secondary-fixed": "#0d1d2d",
+                    "primary": "#ba0013",
+                    "error": "#ba1a1a",
+                    "text-on-dark": "#FFFFFF",
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "surface": "#fff8f7",
+                    "surface-dim": "#f4d2cf",
+                    "on-secondary-fixed-variant": "#39485a",
+                    "primary-container": "#e31e24",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fff8f7",
+                    "surface-container-low": "#fff0ee",
+                    "primary-fixed": "#ffdad6",
+                    "on-primary-fixed": "#410002",
+                    "tertiary-container": "#e7111c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "8rem",
+                    "grid-gutter": "2rem",
+                    "container-padding": "1.5rem",
+                    "content-gap": "4rem"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "title-sm": ["Montserrat"],
+                    "display-xl": ["Montserrat"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-caps": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(186, 0, 19, 0.3);
+        }
+        .community-card-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .community-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-2">
+<img alt="Covenant of Life Logo" class="h-10 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+<span class="text-title-sm font-headline-md font-bold text-primary dark:text-primary">Covenant of Life</span>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Convergence</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Congress</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">Community</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps rounded-full hover:bg-tertiary transition-all active:scale-95">Join Us</button>
+<div class="flex items-center text-primary cursor-pointer active:opacity-80 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+</div>
+<button class="lg:hidden text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex items-center overflow-hidden bg-[#081828]">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="w-full h-full bg-cover bg-center mix-blend-overlay" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLuuGHngIZHU1w_8PtRwH96Db_CuClGpWjzjkVhl0HdGaVnfMBrzrJEPV-1sbD-bWZuUzwnqOAOPKd830SbJg0K_5Q9DQk3bliGMgzGbylbb_aLQvg56S7noyongCgcjCDxyXJ0Rt1bhfRH4L0GANzXRtZslV_QCDa8FTbLePZQuBWsmpFvLKG6tSZnjQ4zkY7pvR_8zWj5MB5ps0A0_qK46ZYblSnP4sIZz6jJQtmgFe2P3ElCQxCUrDsWU')"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#081828] via-[#081828]/80 to-transparent z-10"></div>
+<div class="relative z-20 max-w-[1280px] mx-auto px-container-padding w-full">
+<div class="max-w-3xl">
+<span class="inline-block py-1 px-4 bg-primary/20 text-primary-fixed-dim border border-primary/30 font-label-caps text-label-caps rounded-full mb-6">THE LIFE COMMUNITY</span>
+<h1 class="font-display-xl text-display-xl text-white mb-8 tracking-tight">The Life Community</h1>
+<p class="font-body-lg text-body-lg text-white/80 max-w-2xl leading-relaxed">
+                        A nexus for inspiration where we focus on engendering an atmosphere for building Christ-centered relationships.
+                    </p>
+<div class="mt-10 flex flex-wrap gap-4">
+<a class="bg-primary text-white px-8 py-4 font-label-caps text-label-caps rounded-lg hover:bg-tertiary-container transition-all flex items-center gap-2" href="#register">
+                            GET STARTED <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 font-label-caps text-label-caps rounded-lg hover:bg-white/20 transition-all" href="#about">
+                            LEARN MORE
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Community Section -->
+<section class="py-section-gap max-w-[1280px] mx-auto px-container-padding" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Building a Divine Nexus</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-secondary">
+<p>
+                            The Life Community is more than just a gathering; it is a prophetic ecosystem designed to foster authentic, Christ-centered connections. Under the Apostolic Mandate, we recognize that spiritual growth flourishes best within a community that mirrors the unity of the Godhead.
+                        </p>
+<p>
+                            Our pastoral platform is dedicated to creating safe spaces for fellowship, mentorship, and the shared journey of faith. We believe that when hearts are knit together in love and purpose, the impossible becomes possible.
+                        </p>
+<div class="bg-surface-container-low p-8 border-l-4 border-primary italic rounded-r-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 block" data-icon="format_quote">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-surface mb-4">
+                                "And the Lord said, Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do."
+                            </p>
+<cite class="font-label-caps text-label-caps text-primary not-italic">— GENESIS 11:6</cite>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="rounded-2xl overflow-hidden h-64 community-card-hover shadow-sm">
+<img alt="Community Fellowship" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLv3aSm9IXXRm2DZkywU4PoMtmTknNypFQ8P5jA_vGRg7lRdyUVw2tsZMoaJpCgdqyEsFEQ3zYhQM9wG_DoasSyq-REr2XCnkHbznWb029VE6CmqQxSWwmkQoPMjqfRHMMASU9hCSYTTjPv5AZUn-OEfMP3Qn9nEhRs9NlG6x1_yVBoOzA1NHWa5Vs0ytGtOZcOSJOOwWe0H5N0VrX2GZjgqgdNM-XLt7qkw71uNsy01mY9jvLo1FiN8utY"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-80 community-card-hover shadow-sm">
+<img alt="Corporate Worship" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsKgc8FM0SV2iHP_BmN8IN9U3-LdlvMebmnimkc8JcbEohVLeoP05wc0Pnb5eg14Fk9Cpzf3Imy2HlhRrMbX28OrVcaCm0ZobqAamKnfJpiLMSE0PXneEUdE3PUen8qPS76ypQC6burebJWQDA7vwPvYKCx42yLWxQTLl3-IH6K55HWnn7AR9Ln48l2KCxS06TRtyOebN51e7ba1hpl5IXe61CQdu7FCnLAO6JUzk4FtPPox0kGHJzMbp24"/>
+</div>
+</div>
+<div class="space-y-4 pt-8">
+<div class="rounded-2xl overflow-hidden h-80 community-card-hover shadow-sm">
+<img alt="Small Groups" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvtD3o3jVqbDSDB64fTdyrVfgwyAe7d4zK2UD5bWktZ8cptfe4wZJGlc8H1ZZUt2PpiHh-z_VMfhT4Vi2GOfO7-5jgZU2384DnjuYteUExdbk1PJqFENLru3uU-0Mv0tfeJwH-Th99n2z_0JhckSuY6_2XASObG4POQKNqrMpnti3jehDBOtOob2Ke0gN6U9LFpd1qYBlBMRojdDZMMl1N1jaqLZ6Lr6DXt2SLMInNrcKzKOrtvVR7Zgodx"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-64 community-card-hover shadow-sm">
+<img alt="Community Outreach" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvGQEX-OVaIJgOe4WmymNFYLZyI8gLftSe9LXSrwOsUl8xSrNu4371iZ-LtRoxeUgP03uz4ducqNqj6eVhTSC2b7Ze3mdePTNcxPkN2-_dB3thPRtn6LqCUN2bztKOrRJJ3TCAqGF0U0dIB_oAJ08qBLB4C-urewSjQ9Arzl3hV86_USedic6AjZtAz0ZvrLdmT7fdbm0EK1Ennq71DtT92_rwE3WkoWEMoV_5nxwhgjeldYFkdL3kFOuU"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="bg-surface-muted py-section-gap">
+<div class="max-w-[1280px] mx-auto px-container-padding">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4 uppercase">Visual Journey</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Life Community Gallery Archives</h2>
+<div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="lg:col-span-2 lg:row-span-2 rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Main Community Event" class="w-full h-full object-cover aspect-[4/3]" src="https://lh3.googleusercontent.com/aida/AP1WRLuuGHngIZHU1w_8PtRwH96Db_CuClGpWjzjkVhl0HdGaVnfMBrzrJEPV-1sbD-bWZuUzwnqOAOPKd830SbJg0K_5Q9DQk3bliGMgzGbylbb_aLQvg56S7noyongCgcjCDxyXJ0Rt1bhfRH4L0GANzXRtZslV_QCDa8FTbLePZQuBWsmpFvLKG6tSZnjQ4zkY7pvR_8zWj5MB5ps0A0_qK46ZYblSnP4sIZz6jJQtmgFe2P3ElCQxCUrDsWU"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Gathering Moments" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/AP1WRLvtD3o3jVqbDSDB64fTdyrVfgwyAe7d4zK2UD5bWktZ8cptfe4wZJGlc8H1ZZUt2PpiHh-z_VMfhT4Vi2GOfO7-5jgZU2384DnjuYteUExdbk1PJqFENLru3uU-0Mv0tfeJwH-Th99n2z_0JhckSuY6_2XASObG4POQKNqrMpnti3jehDBOtOob2Ke0gN6U9LFpd1qYBlBMRojdDZMMl1N1jaqLZ6Lr6DXt2SLMInNrcKzKOrtvVR7Zgodx"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Prayer Sessions" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/AP1WRLsKgc8FM0SV2iHP_BmN8IN9U3-LdlvMebmnimkc8JcbEohVLeoP05wc0Pnb5eg14Fk9Cpzf3Imy2HlhRrMbX28OrVcaCm0ZobqAamKnfJpiLMSE0PXneEUdE3PUen8qPS76ypQC6burebJWQDA7vwPvYKCx42yLWxQTLl3-IH6K55HWnn7AR9Ln48l2KCxS06TRtyOebN51e7ba1hpl5IXe61CQdu7FCnLAO6JUzk4FtPPox0kGHJzMbp24"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Relationship Building" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/AP1WRLv3aSm9IXXRm2DZkywU4PoMtmTknNypFQ8P5jA_vGRg7lRdyUVw2tsZMoaJpCgdqyEsFEQ3zYhQM9wG_DoasSyq-REr2XCnkHbznWb029VE6CmqQxSWwmkQoPMjqfRHMMASU9hCSYTTjPv5AZUn-OEfMP3Qn9nEhRs9NlG6x1_yVBoOzA1NHWa5Vs0ytGtOZcOSJOOwWe0H5N0VrX2GZjgqgdNM-XLt7qkw71uNsy01mY9jvLo1FiN8utY"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Outdoor Connect" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/AP1WRLvGQEX-OVaIJgOe4WmymNFYLZyI8gLftSe9LXSrwOsUl8xSrNu4371iZ-LtRoxeUgP03uz4ducqNqj6eVhTSC2b7Ze3mdePTNcxPkN2-_dB3thPRtn6LqCUN2bztKOrRJJ3TCAqGF0U0dIB_oAJ08qBLB4C-urewSjQ9Arzl3hV86_USedic6AjZtAz0ZvrLdmT7fdbm0EK1Ennq71DtT92_rwE3WkoWEMoV_5nxwhgjeldYFkdL3kFOuU"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Small Group Study" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/AP1WRLsoPFzWR20mTIsxc6ERpHTpE9U4HKn2PpZru_P7oDr9vmGpAVrv4rh92xFPTVsxePGKr2oteufxxmJ2rYa7lv4yOJJWM9uJQwx3oTwaKaSRTXYZbGZywvuxbvcq2l9vwsZULqBvQaopl9bnzryLSNGWxJ7fashrJg-6ldiHof_0WTxWrroqNs6KcBeHJaqQ1TdGXR_QYKnyNjlf9HmAsEaFWOkye8lE3JvVo1pLyex9PpVIgI0Fk8fE6App"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Youth Engagement" class="w-full h-full object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/AP1WRLsLf5mppV0CYqGIVyufss0S0MmSYDn0921V-8cK04aILBvlVsOZoSShNE_MLh-zizCqh6OZGqrlYM-IqUAjdQR00CJaYpAqTr_pb8z0jeq68kXcPwtIUr2jJ60t4Kt5GFxvFVQRQLTDhZlfWCnudquiCE729FeiK8oDhHVPQ6EeSwtdKeSRC8hvbE9etRiDAg3lnquL91olRYw_dWeA412raWVL9vo1XvlBcYUulaOKngsO5KqZ0e1Pzaol"/>
+</div>
+<div class="lg:col-span-2 rounded-xl overflow-hidden shadow-lg community-card-hover">
+<img alt="Service &amp; Fellowship" class="w-full h-full object-cover h-64" src="https://lh3.googleusercontent.com/aida/AP1WRLse-o-68LWguO8Yd831EIIHkqrAtHWZWK9OLdpl-2QHWS1m5JC_3pRap1d6dbSa1Ug1vAIxY2_GDKq6T6t7kKtilKo3BM-8P9IAHkWeHZZju7LwRL8_sw34ypubyIzbOJB2uPTlZ4weq53TdJmkJh0Egi5jUxhGb93yUivMs8wnZEfrdgvvaxYztMwVJzMAtIFR6TjiAEH28qeCTqpwJZCHYH9MDopxKUkpv0OSoqCuGdJ1hH_pB1TJs1eY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Portal -->
+<section class="py-section-gap relative overflow-hidden" id="register">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary-fixed/30 -skew-x-12 transform translate-x-1/2 z-0 hidden lg:block"></div>
+<div class="max-w-[1280px] mx-auto px-container-padding relative z-10">
+<div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Join Our Next Event</h2>
+<p class="text-secondary mb-8">The Life Community Outdoor Event Registration Portal. Secure your spot and join the family.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 gap-4">
+<div>
+<label class="font-label-caps text-[12px] text-secondary mb-2 block">FULL NAME</label>
+<input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-[12px] text-secondary mb-2 block">GENDER SELECTION</label>
+<div class="flex gap-4">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="gender" type="radio"/>
+<span class="text-secondary group-hover:text-primary transition-colors">Male</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-primary focus:ring-primary" name="gender" type="radio"/>
+<span class="text-secondary group-hover:text-primary transition-colors">Female</span>
+</label>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-[12px] text-secondary mb-2 block">HOW DID YOU HEAR ABOUT US?</label>
+<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary">
+<option>Social Media</option>
+<option>Friend/Family</option>
+<option>Church Broadcast</option>
+<option>Website</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-label-caps text-label-caps hover:bg-tertiary transition-all shadow-lg active:scale-95 flex justify-center items-center gap-2" type="submit">
+                                SUBMIT REGISTRATION <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</form>
+</div>
+<div class="hidden md:block relative">
+<img alt="Event Atmosphere" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsLf5mppV0CYqGIVyufss0S0MmSYDn0921V-8cK04aILBvlVsOZoSShNE_MLh-zizCqh6OZGqrlYM-IqUAjdQR00CJaYpAqTr_pb8z0jeq68kXcPwtIUr2jJ60t4Kt5GFxvFVQRQLTDhZlfWCnudquiCE729FeiK8oDhHVPQ6EeSwtdKeSRC8hvbE9etRiDAg3lnquL91olRYw_dWeA412raWVL9vo1XvlBcYUulaOKngsO5KqZ0e1Pzaol"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex items-center justify-center p-12 text-center text-white bg-gradient-to-t from-primary/80 to-transparent">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Engendering Atmosphere</h3>
+<p class="font-body-md opacity-90">Experience the power of unity and the beauty of Christ-centered fellowship.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#081828] text-white">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-container-padding py-section-gap">
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-8">
+<img alt="Footer Logo" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLv9JlAJhOJ_KfJ78FCc05Y8_zh21nMaOlKMBKqNjMscqiOLkZzXXfxyc6onX7_UMNXWTQ3y2p7mhQQKXvkDHx2MARs-mjS-FC_pAtKyTAy90vWevVfN0jhJxthBKLEKH_i-w_9rI5veCOHJsF89Odglzv5MXL627y8v-4a1njM6FF3ob0oGZ-8B9ZBBwSCXiMWpVPRL11UG1XoivHp483bJkPsX0EhQOPIRxmwp6ONZQjy6siQqzdrlKQi3"/>
+<span class="text-headline-md font-headline-md text-white">Covenant of Life</span>
+</div>
+<p class="text-white/60 text-body-md mb-6 leading-relaxed">
+                    Under the Apostolic Mandate, we exist to build a kingdom-minded generation through the power of God's Word.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-8 border-b border-white/10 pb-4">PROGRAMS</h4>
+<ul class="space-y-4">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Weekly Convergence</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Quarterly Congress</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Youth Fire Conference</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-8 border-b border-white/10 pb-4">RESOURCES</h4>
+<ul class="space-y-4">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Media Archives</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Life Community</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Bible Studies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-8 border-b border-white/10 pb-4">ADMINISTRATION</h4>
+<ul class="space-y-4">
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Member Portal</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Legal &amp; Privacy</a></li>
+<li><a class="text-white/80 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 py-8">
+<div class="max-w-[1280px] mx-auto px-container-padding flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-white/40 text-sm">© 2024 The Covenant of Life Global. All Rights Reserved. Apostolic Mandate.</p>
+<div class="flex gap-6 text-white/40 text-sm">
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

@@ -21,4 +21,12 @@ class ServicePageController extends Controller
             'team_leader' => Leader::teamLeader()->first(),
         ]);
     }
+
+    public function show(Service $service)
+    {
+        return view('services.show', [
+            'settings' => Setting::instance(),
+            'service' => $service,
+        ]);
+    }
 }

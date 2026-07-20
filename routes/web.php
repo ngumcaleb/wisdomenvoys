@@ -79,6 +79,8 @@ Route::get('/products', [\App\Http\Controllers\ProductPageController::class, 'in
 Route::get('/podcasts', [\App\Http\Controllers\PodcastPageController::class, 'index'])->name('podcasts');
 Route::get('/partnership', [\App\Http\Controllers\PartnershipController::class, 'index'])->name('partnership');
 
+Route::get('/services/{service:slug}', [\App\Http\Controllers\ServicePageController::class, 'show'])->name('services.show');
+
 /*
 |--------------------------------------------------------------------------
 | Public Form Submissions
