@@ -71,6 +71,7 @@
                 <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 {{ request()->routeIs('services') ? 'text-primary border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary' }}" href="{{ route('services') }}">Our Services</a>
                 <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 {{ request()->routeIs('products') ? 'text-primary border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary' }}" href="{{ route('products') }}">Our Products</a>
                 <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 {{ request()->routeIs('partnership') ? 'text-primary border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary' }}" href="{{ route('partnership') }}">Partnership</a>
+                <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] transition-colors duration-200 {{ request()->routeIs('team') ? 'text-primary border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary' }}" href="{{ route('team') }}">Our Team</a>
             </div>
             <a href="{{ route('give') }}" class="hidden md:inline-block bg-primary text-on-primary px-6 py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] hover:bg-primary-container transition-all">
                 Give to Us
@@ -85,6 +86,7 @@
             <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('services') }}">Our Services</a>
             <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('products') }}">Our Products</a>
             <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('partnership') }}">Partnership</a>
+            <a class="font-headline text-xs font-bold uppercase tracking-[0.1em] text-on-surface-variant" href="{{ route('team') }}">Our Team</a>
             <a href="{{ route('give') }}" class="bg-primary text-on-primary w-full py-3 rounded-full font-headline text-xs font-bold uppercase tracking-[0.1em] text-center">Give to Us</a>
         </div>
     </header>
@@ -137,6 +139,7 @@
                     <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('services') }}">Our Services</a></li>
                     <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('download.index') }}">Free Downloads</a></li>
                     <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('partnership') }}">Partnership</a></li>
+                    <li><a class="text-[13px] sm:text-sm text-white/50 hover:text-primary transition-colors duration-300" href="{{ route('team') }}">Our Team</a></li>
                 </ul>
             </div>
             <div>

@@ -61,6 +61,12 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     Route::get('/contacts', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('contacts.index');
     Route::get('/contacts/{contact}', [\App\Http\Controllers\Admin\ContactController::class, 'show'])->name('contacts.show');
     Route::delete('/contacts/{contact}', [\App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('contacts.destroy');
+
+    // Streams
+    Route::apiResource('streams', \App\Http\Controllers\Admin\StreamController::class);
+
+    // Team Members
+    Route::apiResource('team-members', \App\Http\Controllers\Admin\TeamMemberController::class);
 });
 
 /*
@@ -79,6 +85,7 @@ Route::get('/products', [\App\Http\Controllers\ProductPageController::class, 'in
 Route::get('/podcasts', [\App\Http\Controllers\PodcastPageController::class, 'index'])->name('podcasts');
 Route::get('/partnership', [\App\Http\Controllers\PartnershipController::class, 'index'])->name('partnership');
 Route::get('/give', [\App\Http\Controllers\GiveController::class, 'index'])->name('give');
+Route::get('/team', [\App\Http\Controllers\TeamPageController::class, 'index'])->name('team');
 
 Route::get('/services/{service:slug}', [\App\Http\Controllers\ServicePageController::class, 'show'])->name('services.show');
 

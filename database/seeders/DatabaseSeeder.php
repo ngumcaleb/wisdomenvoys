@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             PodcastSeeder::class,
             ServiceSeeder::class,
             ProductSeeder::class,
+            StreamSeeder::class,
+            TeamMemberSeeder::class,
         ]);
     }
 }
