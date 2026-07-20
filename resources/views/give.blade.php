@@ -24,13 +24,9 @@
                 Your generous giving empowers us to raise kingdom ambassadors, fund global missions, and provide free spiritual resources to those who seek them.
             </p>
             <div class="flex flex-nowrap gap-2.5 sm:gap-3">
-                <a href="#online-giving" class="group inline-flex items-center gap-2 bg-primary text-white font-headline text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
-                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] md:text-[18px]">volunteer_activism</span>
-                    Give Now
-                </a>
-                <a href="#mobile-money" class="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white font-headline text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <a href="#momo-section" class="group inline-flex items-center gap-2 bg-primary text-white font-headline text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.06em] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
                     <span class="material-symbols-outlined text-[14px] sm:text-[16px] md:text-[18px]">smartphone</span>
-                    Mobile Money
+                    Give via Mobile Money
                 </a>
             </div>
         </div>
@@ -47,14 +43,15 @@
                 <span class="font-headline text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-[0.15em] text-primary">HOW TO GIVE</span>
             </div>
             <h2 class="font-headline text-[22px] sm:text-[28px] md:text-[34px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold text-on-surface mb-4 sm:mb-5 md:mb-6">Your Giving Makes an Impact</h2>
-            <p class="text-[14px] sm:text-sm md:text-base text-on-surface-variant leading-relaxed mb-5 sm:mb-6 md:mb-8">Your generous giving empowers us to raise kingdom ambassadors, fund global missions, and provide free spiritual resources to those who seek them. Send your offering directly via Mobile Money to the numbers below.</p>
-            <a href="https://givings.thecovenantoflife.com" target="_blank" class="group inline-flex items-center gap-2 bg-primary text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.08em] px-8 sm:px-10 py-3 sm:py-3.5 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
-                Give Online
-                <span class="material-symbols-outlined text-[14px] sm:text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+            <p class="text-[14px] sm:text-sm md:text-base text-on-surface-variant leading-relaxed mb-5 sm:mb-6 md:mb-8">Your generous giving empowers us to raise kingdom ambassadors, fund global missions, and provide free spiritual resources to those who seek them. You can send your offering directly via Mobile Money.</p>
+            <a href="#momo-section" class="group inline-flex items-center gap-2 bg-primary text-white font-headline text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.08em] px-8 sm:px-10 py-3 sm:py-3.5 rounded-full shadow-lg shadow-primary/30 hover:bg-primary-container hover:shadow-xl transition-all duration-300">
+                <span class="material-symbols-outlined text-[14px] sm:text-[16px]">smartphone</span>
+                See Giving Options
+                <span class="material-symbols-outlined text-[14px] sm:text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_downward</span>
             </a>
         </div>
         {{-- Right: MoMo --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-5">
+        <div id="momo-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-5">
             <div class="bg-white rounded-[20px] sm:rounded-[24px] border border-outline-variant/50 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-6 sm:p-7 flex flex-col items-center text-center hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500">
                 <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FFCC00] flex items-center justify-center mb-4 shadow-lg shadow-[#FFCC00]/20">
                     <span class="font-headline text-[#000000] text-[16px] sm:text-[18px] font-extrabold">MTN</span>
@@ -88,9 +85,9 @@
     <div class="max-w-[1280px] mx-auto px-5 sm:px-8 md:px-10 text-center relative z-10">
         <h2 class="font-headline text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] leading-[1.15] sm:leading-[1.2] font-bold mb-4 sm:mb-5 md:mb-6">Every Seed Counts</h2>
         <p class="text-[14px] sm:text-sm md:text-base lg:text-lg text-white/60 max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed">Whether a one-time offering or a recurring gift, your generosity sustains the mission of raising kingdom ambassadors across the globe.</p>
-        <a class="inline-flex items-center gap-2 bg-primary text-white py-3 sm:py-3.5 px-8 sm:px-10 font-headline text-[11px] sm:text-xs font-bold uppercase tracking-[0.08em] hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 rounded-full" href="https://givings.thecovenantoflife.com" target="_blank">
-            Give Now
-            <span class="material-symbols-outlined text-[14px] sm:text-[16px]">arrow_forward</span>
+        <a class="inline-flex items-center gap-2 bg-primary text-white py-3 sm:py-3.5 px-8 sm:px-10 font-headline text-[11px] sm:text-xs font-bold uppercase tracking-[0.08em] hover:bg-primary-container hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 rounded-full" href="#momo-section">
+            Give via Mobile Money
+            <span class="material-symbols-outlined text-[14px] sm:text-[16px]">arrow_downward</span>
         </a>
     </div>
 </section>
