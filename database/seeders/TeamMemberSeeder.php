@@ -24,8 +24,7 @@ class TeamMemberSeeder extends Seeder
         ]);
 
         $members = [
-            ['stream' => 'Media & Tech', 'name' => 'Caleb Ngum', 'role' => 'Head of Media & Tech', 'bio' => 'Overseeing all digital content, live streaming, and technical production for the ministry.', 'lead' => true],
-            ['stream' => 'Media & Tech', 'name' => 'Sarah Johnson', 'role' => 'Social Media Lead', 'bio' => 'Managing online presence and digital engagement across all platforms.', 'lead' => false],
+            ['stream' => 'Media & Tech', 'name' => 'Sarah Johnson', 'role' => 'Social Media Lead', 'bio' => 'Managing online presence and digital engagement across all platforms.', 'lead' => true],
             ['stream' => 'Media & Tech', 'name' => 'David Chen', 'role' => 'Sound Engineer', 'bio' => 'Managing sound systems and audio production for services and events.', 'lead' => false],
 
             ['stream' => 'Worship & Prayer', 'name' => 'Grace Obi', 'role' => 'Worship Leader', 'bio' => 'Leading worship sessions and coordinating the worship team for all ministry gatherings.', 'lead' => true],
