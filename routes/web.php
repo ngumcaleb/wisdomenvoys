@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 | Auth Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/login', [\App\Http\Controllers\AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
+Route::get('/wm-a9f3k', [\App\Http\Controllers\AuthController::class, 'showLogin'])->name('login');
+Route::post('/wm-a9f3k', [\App\Http\Controllers\AuthController::class, 'login']);
 Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
 
 /*
